@@ -129,6 +129,8 @@ const Graph_tab_grey_icon = ()=>{
         <SvgXml xml={xml}  />
     
     )}
+
+
 const Setting_tab_icon = ()=>{
     const xml = `
     <svg width="30" height="32" viewBox="0 0 30 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -145,6 +147,19 @@ const Setting_tab_icon = ()=>{
         <SvgXml xml={xml}  />
     
     )}
+
+    const LeftIcon = ()=>{
+        const xml = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="18" viewBox="0 0 25 18" fill="none">
+        <path d="M8.72114 16.6021L1 8.67318L8.72114 1" stroke="#79489D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M13.1652 13.469L8.49738 8.67323L13.1812 4.02136" stroke="#79489D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M8.49738 8.67322H23.0444" stroke="#79489D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        `
+            return(
+            <SvgXml xml={xml}  />
+        
+        )}
     
     const Setting_tab_grey_icon = ()=>{
     const xml = `
@@ -176,6 +191,186 @@ const Logout_icon = ()=>{
         <SvgXml xml={xml}  />
     
     )}
+
+    const RightIcon = ()=>{
+        const xml = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="18" viewBox="0 0 25 18" fill="none">
+        <path d="M15.5222 0.999982L23.2433 8.92893L15.5222 16.6021" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11.0781 4.13315L15.746 8.92888L11.0621 13.5807" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M15.746 8.92889L1.1989 8.9289" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>`
+            return(
+            <SvgXml xml={xml}  />
+        
+        )}
+
+    const HeartIcon = ()=>{
+        const xml = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" viewBox="0 0 16 13" fill="none">
+            <path d="M14.7143 4.61867C14.7143 7.72038 10.7143 11.856 7.85714 11.856C5 11.856 1 7.72038 1 4.61867C1 2.61806 2.78857 1 5 1C6.12 1 7.13714 1.41873 7.85714 2.09077C8.57714 1.41873 9.59429 1 10.7143 1C12.9257 1 14.7143 2.61806 14.7143 4.61867Z" stroke="#9D9B9B" stroke-miterlimit="10"/>
+            <path d="M9.57141 3.58478C10.8343 3.58478 11.8571 4.51012 11.8571 5.65259" stroke="#9D9B9B" stroke-miterlimit="10"/>
+            </svg>`
+            return(
+            <SvgXml xml={xml}  />
+        
+    )}
+
+    const RoboIcon = ()=>{
+        const xml = `<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+        <circle cx="15" cy="15" r="15" fill="url(#paint0_linear_62_362)"/>
+        <path d="M18.9368 19.9555H10.4888C9.95109 19.9555 9.5682 19.4801 9.73113 19.0158L10.5295 16.7606C10.7087 16.2557 10.8024 15.7288 10.8024 15.1981V14.0447C10.8024 12.1396 12.5376 10.7356 14.7128 10.7356C16.9939 10.7356 18.6232 12.1396 18.6232 14.0447V15.1981C18.6232 15.7288 18.7169 16.2557 18.8961 16.7606L19.6945 19.0158C19.8574 19.4801 19.4745 19.9555 18.9368 19.9555Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M14.7128 10.7356V9" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M16.3952 19.9555C16.3952 20.8989 15.5479 21.6653 14.5051 21.6653C13.4624 21.6653 12.6151 20.8989 12.6151 19.9555" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9.60896 16.1047C8.70061 16.0015 8 15.3014 8 14.4575C8 13.6099 8.70061 12.9098 9.60896 12.8103" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M19.8126 16.1047C20.721 16.0015 21.4216 15.3014 21.4216 14.4575C21.4216 13.6099 20.721 12.9098 19.8126 12.8103" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+        <defs>
+        <linearGradient id="paint0_linear_62_362" x1="15" y1="0" x2="15" y2="30" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#E33895"/>
+        <stop offset="1" stop-color="#79489D"/>
+        </linearGradient>
+        </defs>
+        </svg>`
+            return(
+            <SvgXml xml={xml}  />
+        
+    )}
+
+    const Stripe = ()=>{
+        const xml = `<svg xmlns="http://www.w3.org/2000/svg" width="26" height="20" viewBox="0 0 26 20" fill="none">
+        <g clip-path="url(#clip0_62_385)">
+        <path d="M5.76473 19.4118C4.03532 19.4118 2.48237 18.8941 1.01179 17.8353C0.741198 17.6471 0.588257 17.3294 0.588257 17V4.70589C0.588257 4.31765 0.800022 3.96471 1.15296 3.78824C1.49414 3.62354 1.9059 3.64707 2.21179 3.87059C3.32943 4.67059 4.49414 5.05883 5.76473 5.05883C7.89414 5.05883 10.0824 4.02354 12.4 2.91765C14.8236 1.76471 17.3294 0.576477 19.9177 0.576477C21.6471 0.576477 23.2 1.09412 24.6706 2.15295C24.9412 2.35295 25.1059 2.67059 25.1059 3.00001V15.2941C25.1059 15.6824 24.8941 16.0353 24.5412 16.2118C24.2 16.3882 23.7883 16.3529 23.4706 16.1294C22.3647 15.3294 21.2 14.9412 19.9177 14.9412C17.7883 14.9412 15.6 15.9765 13.2824 17.0824C10.8706 18.2235 8.36473 19.4118 5.76473 19.4118Z" stroke="#79489D" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M8.81184 8.2706C7.31772 8.83531 6.0236 9.10589 4.8236 9.10589C4.29419 9.10589 3.78831 9.05883 3.29419 8.95295" stroke="#79489D" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M3.48242 15.2353C4.91772 15.5412 6.50595 15.3412 8.48242 14.6" stroke="#79489D" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M22.2 4.76471C20.7647 4.45882 19.1765 4.65882 17.2 5.4C17.1412 5.42353 17.0941 5.43529 17.0353 5.43529" stroke="#79489D" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M22.2 11.9765C20.7647 11.6706 19.1764 11.8824 17.2 12.6118" stroke="#79489D" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11.7295 11.3883C11.7295 12.2824 12.4589 13.0118 13.353 13.0118C14.2471 13.0118 14.9766 12.2824 14.9766 11.3883C14.9766 10.4941 14.2589 9.76473 13.3648 9.76473C12.4707 9.76473 11.7295 9.03532 11.7295 8.1412C11.7295 7.24708 12.4589 6.51767 13.353 6.51767C14.2471 6.51767 14.9766 7.24708 14.9766 8.1412" stroke="#79489D" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M13.3647 6.5059V5.03531" stroke="#79489D" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M13.3647 14.4941V13.0118" stroke="#79489D" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        <defs>
+        <clipPath id="clip0_62_385">
+        <rect width="25.6941" height="20" fill="white"/>
+        </clipPath>
+        </defs>
+        </svg>`
+            return(
+            <SvgXml xml={xml}  />
+        
+    )}
+
+    const RightBlack = ()=>{
+        const xml = `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 22 16" fill="none">
+        <path d="M13.8524 1L20.7807 8.11475L13.8524 15" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9.85041 3.81152L14.0533 8.1148M14.0533 8.1148L9.85041 12.289M14.0533 8.1148H1" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>`
+            return(
+            <SvgXml xml={xml}  />
+        
+    )}
+
+    
+    const LeftBlack = ()=>{
+        const xml = `<svg xmlns="http://www.w3.org/2000/svg" width="26" height="16" viewBox="0 0 26 16" fill="none">
+        <path d="M7.92828 15L1 7.88525L7.92828 1" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11.9159 12.1885L7.72742 7.88524L11.9303 3.71106" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M7.72742 7.88525H25.084" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>`
+            return(
+            <SvgXml xml={xml}  />
+        
+    )}
+
+    const Option = ()=>{
+        const xml = `<svg xmlns="http://www.w3.org/2000/svg" width="31" height="26" viewBox="0 0 31 26" fill="none">
+        <path d="M6.96836 8.59761C9.06638 8.59761 10.7672 6.89683 10.7672 4.79881C10.7672 2.70078 9.06638 1 6.96836 1C4.87034 1 3.16956 2.70078 3.16956 4.79881C3.16956 6.89683 4.87034 8.59761 6.96836 8.59761Z" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M1 4.79883H3.16954" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M10.7672 4.79883H29.8288" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M13.7218 25C15.8198 25 17.5206 23.2992 17.5206 21.2012C17.5206 19.1032 15.8198 17.4024 13.7218 17.4024C11.6238 17.4024 9.92297 19.1032 9.92297 21.2012C9.92297 23.2992 11.6238 25 13.7218 25Z" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M1 21.2012H9.92297" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M17.5206 21.2012H29.8288" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M23.852 16.5582C25.95 16.5582 27.6508 14.8575 27.6508 12.7594C27.6508 10.6614 25.95 8.96063 23.852 8.96063C21.754 8.96063 20.0532 10.6614 20.0532 12.7594C20.0532 14.8575 21.754 16.5582 23.852 16.5582Z" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M29.8287 12.7595H27.6508" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M20.0531 12.7595H1" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>`
+            return(
+            <SvgXml xml={xml}  />
+        
+    )}
+
+
+    const Location = ()=>{
+        const xml = `<svg xmlns="http://www.w3.org/2000/svg" width="10" height="13" viewBox="0 0 10 13" fill="none">
+        <path d="M5.1632 1C2.8665 1 1 2.97749 1 5.41075C1 7.26327 3.42159 10.1376 4.57341 11.402C4.89953 11.7549 5.43381 11.7549 5.75992 11.402C6.91174 10.145 9.33333 7.27062 9.33333 5.41075C9.3264 2.97749 7.46683 1 5.1632 1ZM5.1632 6.881C4.39994 6.881 3.77547 6.21939 3.77547 5.41075C3.77547 4.60211 4.39994 3.9405 5.1632 3.9405C5.93339 3.9405 6.55093 4.60211 6.55093 5.41075C6.55093 6.21939 5.93339 6.881 5.1632 6.881Z" stroke="#B0B0B0"/>
+        </svg>`
+            return(
+            <SvgXml xml={xml}  />
+    )}
+
+
+    const HeartColor = ()=>{
+        const xml = `<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+        <path d="M12.4286 4.55556C12.4286 7.60317 9.09524 11.6667 6.71429 11.6667C4.33333 11.6667 1 7.60317 1 4.55556C1 2.58984 2.49048 1 4.33333 1C5.26667 1 6.11429 1.41143 6.71429 2.07175C7.31429 1.41143 8.1619 1 9.09524 1C10.9381 1 12.4286 2.58984 12.4286 4.55556Z" stroke="#E33895" stroke-miterlimit="10"/>
+        <path d="M8.14282 3.53967C9.1952 3.53967 10.0476 4.44888 10.0476 5.57142" stroke="#E33895" stroke-miterlimit="10"/>
+        </svg>`
+            return(
+            <SvgXml xml={xml}  />
+    )}
+
+    const Upload = ()=>{
+        const xml = `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+        <path d="M10.5368 6.52225V9.97366C10.5368 10.5113 10.1281 10.9473 9.62398 10.9473H1.91281C1.40872 10.9473 1 10.5113 1 9.97366V6.52225" stroke="#E33895" stroke-miterlimit="10" stroke-linejoin="round"/>
+        <path d="M2.68933 4.29155L5.76835 1.00726L8.84737 4.29155" stroke="#E33895" stroke-miterlimit="10" stroke-linejoin="round"/>
+        <path d="M5.76843 1V8.56403" stroke="#E33895" stroke-miterlimit="10" stroke-linejoin="round"/>
+        </svg>`
+            return(
+            <SvgXml xml={xml}  />
+    )}
+
+    const LinearCross = ()=>{
+        const xml = `<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+        <circle cx="25" cy="25" r="25" fill="url(#paint0_linear_68_3454)"/>
+        <g clip-path="url(#clip0_68_3454)">
+        <path d="M32.0711 31.6274L17.929 17.4853" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M32.071 17.4853L17.9289 31.6274" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        <defs>
+        <linearGradient id="paint0_linear_68_3454" x1="25" y1="0" x2="25" y2="50" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#E33895"/>
+        <stop offset="1" stop-color="#79489D"/>
+        </linearGradient>
+        <clipPath id="clip0_68_3454">
+        <rect width="22" height="22" fill="white" transform="translate(25 9) rotate(45)"/>
+        </clipPath>
+        </defs>
+        </svg>`
+            return(
+            <SvgXml xml={xml}  />
+    )}
+
+    const RadioActive = ()=>{
+        const xml = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <rect x="0.5" y="0.5" width="15" height="15" rx="7.5" fill="white" stroke="#E33895"/>
+        <rect x="3.7002" y="3.69995" width="8.6" height="8.6" rx="4.3" fill="#E33895" stroke="#E33895"/>
+        </svg>`
+            return(
+            <SvgXml xml={xml}  />
+    )}
+
+    const RadioInactive = ()=>{
+        const xml = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <rect x="0.5" y="0.5" width="15" height="15" rx="7.5" fill="white" stroke="#E2E9EE"/>
+        </svg>`
+            return(
+            <SvgXml xml={xml}  />
+    )}
+
+    const GreyStar = ()=>{
+        const xml = `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="13" viewBox="0 0 12 13" fill="none">
+        <path d="M9.19741 11.6667C9.11147 11.6667 9.02553 11.6405 8.95186 11.5815L6.22013 9.46L3.48839 11.5815C3.34106 11.6929 3.14462 11.6929 3.00343 11.5815C2.8561 11.4702 2.80085 11.2672 2.84996 11.0904L3.89355 7.6593L1.16181 5.53775C1.01448 5.42644 0.959231 5.22345 1.00834 5.04665C1.06359 4.86331 1.2232 4.7389 1.40122 4.7389H4.78366L5.82725 1.30776C5.8825 1.12441 6.0421 1 6.22013 1C6.39815 1 6.55776 1.12441 6.61301 1.30776L7.65659 4.7389H11.039C11.2171 4.7389 11.3767 4.86331 11.4319 5.04665C11.4872 5.23 11.4258 5.42644 11.2846 5.53775L8.55285 7.6593L9.59643 11.0904C9.65168 11.2738 9.59029 11.4702 9.44296 11.5815C9.3693 11.6339 9.28336 11.6667 9.19741 11.6667Z" fill="white" stroke="#E2E9EE"/>
+        </svg>`
+            return(
+            <SvgXml xml={xml}  />
+    )}
+
 const Dummy5 = ()=>{
     const xml = `
     
@@ -194,5 +389,20 @@ const Dummy5 = ()=>{
             Graph_tab_grey_icon,
             Setting_tab_icon,
             Setting_tab_grey_icon,
-            Logout_icon
+            Logout_icon,
+            LeftIcon,
+            RightIcon,
+            HeartIcon,
+            RoboIcon,
+            Stripe,
+            RightBlack,
+            LeftBlack,
+            Option,
+            Location,
+            HeartColor,
+            Upload,
+            LinearCross,
+            RadioActive,
+            RadioInactive,
+            GreyStar
         };

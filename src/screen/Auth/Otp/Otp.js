@@ -22,7 +22,7 @@ const SocialBtn = ({text , Icon , add}) => {
     )
 }
 
-function OtpScreen() {
+function OtpScreen({navigation}) {
     const [phone, set_phone] = useState('');
     const [code, setCode] = useState("");
  
@@ -54,16 +54,20 @@ function OtpScreen() {
                 style={styles.inpt}
             />
 
-            <View style={{flexDirection:'row',justifyContent:'space-between'}} >
+            <View style={{flexDirection:'row',justifyContent:'space-between',marginTop:100}} >
                 <GradientBorder
                     additional={[styles.mainLinea,{width:windowWidth - 250}]}
-                    addInner={[styles.innerTouc,{width:windowWidth - 253}]}
-                    text={'BACK'}
+                    addInner={[styles.innerTouc,{width:windowWidth - 253,flexDirection:'row'}]}
+                    icon={true}
+                    text={' BACK'}
+                    txtStyle={{color:colors.gradient2,fontSize:20,fontWeight:'500'}}
+                    onpress={()=>alert('sdsdf')}
                 />
                 <GradientButton
                     Title1={'NEXT'}
                     style={styles.gB}
-                    // upper_margin={0}
+                    icon={true}
+                    onpress={()=>navigation.navigate('Home')}
                 />
             </View>
 

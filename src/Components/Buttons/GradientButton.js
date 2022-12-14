@@ -2,6 +2,7 @@ import React,{useState,useRef,useEffect} from 'react';
 import { StyleSheet, Text, View, TouchableOpacity,Dimensions,SafeAreaView ,FlatList, ScrollView,ActivityIndicator} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import colors from '../../assets/colors';
+import { RightIcon } from '../../assets/Svgs/svg_icons';
 
 
 var windowWidth = Dimensions.get('window').width
@@ -14,7 +15,10 @@ export default function GradientButton({
     upper_margin,
     end,
     color,
-    style
+    txtstyle,
+    icon,
+    style,
+    gStyle
 }) {
 
     const [manual_time, set_manual_time] = useState('');
@@ -59,16 +63,19 @@ export default function GradientButton({
         <View style={[Style_auth.button_view,style]}>
             <LinearGradient
                 colors={[colors.gradient1,colors.gradient2]}
-                style={styles.gradient_view}
+                style={[styles.gradient_view,gStyle]}
             >
                 <TouchableOpacity onPress={()=>onpress()} style={[styles.submit,{marginTop:upper_margin}]}>
                     {Title2=='none'?null
                     :
-                    <>
-                    {check_svg()}
-                    </>
+                        <>
+                            {check_svg()}
+                        </>
                     }
-                    <Text style={styles.submit_txt}>{Title1}</Text>
+                    <Text style={[styles.submit_txt,txtstyle]}>{Title1} </Text>
+                    {icon &&
+                        <RightIcon/>
+                    }
                 </TouchableOpacity>
             </LinearGradient>
         </View>

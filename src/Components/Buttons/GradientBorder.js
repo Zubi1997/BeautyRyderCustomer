@@ -4,15 +4,28 @@ import colors from '../../assets/colors';
 var windowWidth = Dimensions.get('window').width
 var windowHeight=Dimensions.get('window').height
 import LinearGradient from 'react-native-linear-gradient';
+import { LeftIcon } from '../../assets/Svgs/svg_icons';
 
-export default function GradientBorder({additional , addInner , onpress , text , txtStyle}) {
+
+export default function GradientBorder({additional , addInner , onpress , text , txtStyle , icon , Pic }) {
   return (
     <LinearGradient
         colors={[colors.gradient1,colors.gradient2]}
         style={additional ? additional : styles.mainLinea}
     >
-        <Pressable onPress={onpress} style={addInner ? addInner : styles.innerTouc} >
-            <Text style={txtStyle ? txtStyle : styles.txt} >{text}</Text>
+        <Pressable onPress={onpress} style={addInner ? addInner : [styles.innerTouc,{flexDirection:icon ? 'row' : 'column'}]} >
+            {icon && 
+              <>
+                {Pic ? 
+                  <Pic/>
+                  :
+                  <LeftIcon/>
+                } 
+              </>
+            }
+            {text &&
+               <Text style={txtStyle ? txtStyle : styles.txt} >{text}</Text>
+            }
         </Pressable>
     </LinearGradient>
   )
