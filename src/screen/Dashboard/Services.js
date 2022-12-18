@@ -1,10 +1,11 @@
 import React,{useState} from 'react'
 import { FlatList, ScrollView , Modal , Image, TouchableOpacity, View ,TextInput, Text , StyleSheet ,Dimensions, Pressable } from 'react-native'
 import colors from '../../assets/colors';
-import { Location , HeartColor, Upload ,RightBlack , Stripe , LinearCross ,RadioInactive , RadioActive } from '../../assets/Svgs/svg_icons';
+import { Another } from '../../assets/Svgs/svg_images';
 import GradientButton from '../../Components/Buttons/GradientButton';
 import GradientBorder from '../../Components/Buttons/GradientBorder';
 import LinearGradient from 'react-native-linear-gradient';
+import TopTab from '../../Components/TopTab/TopTab';
 // import { SliderBox } from "react-native-image-slider-box";
 var windowWidth = Dimensions.get('window').width
 var windowHeight=Dimensions.get('window').height
@@ -14,6 +15,10 @@ import { Img } from '../../assets/Svgs/svg_images';
 import { Rating, AirbnbRating } from 'react-native-ratings';
 import Star from '../../assets/pngImages/star.png'
 import GreyStar from '../../assets/pngImages/greyStar.png'
+import { Location ,  Call,
+    Fav,
+    UploadBlack,
+    LocationBlack } from '../../assets/Svgs/svg_icons';
 const SLIDER_WIDTH = Dimensions.get('window').width;
 const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.8);
 const ITEM_HEIGHT = Math.round(ITEM_WIDTH * 3 / 4);
@@ -33,8 +38,6 @@ function BusinessList({navigation}) {
        
       ]);
   
-
-   
     const toggleModal = () => {
         setModalVisible(!isModalVisible);
     };
@@ -44,11 +47,63 @@ function BusinessList({navigation}) {
         
             <Header
                 onpress={()=>navigation.goBack()}
-                option={true}
+                // option={true}
             />
-         
             
-            <View style={{height:100}} />
+            <View style={{width:'90%',alignSelf:'center',marginTop:20}} >
+                <View style={{alignSelf:'center'}} >
+                    <Another/>
+                </View>
+                <Text style={[styles.heading,{fontSize:16,fontWeight:'400',color:colors.text,marginTop:20}]} >Beautician Name</Text>
+                <View style={{flexDirection:'row',marginTop:4}} >
+                    <Text style={[styles.txtStyle,{fontSize:14,fontWeight:'400',color:colors.inpt,width:'85%'}]} ><Location/> 2541 simple St. Virginia</Text>
+                    <Text style={[styles.txtStyle,{fontSize:14,fontWeight:'400',color:colors.inpt}]} >|   3.4 mi</Text>
+                </View>
+                <View style={{flexDirection:'row',alignItems:'center',marginTop:4}} >
+                    <Text style={[styles.txtStyle,{fontSize:10,fontWeight:'400'}]} >4.8  </Text>
+                    <Rating
+                        type='custom'
+                        ratingImage={Star}
+                        ratingColor='#F5F5F5'
+                        // ratingBackgroundColor='#fff'
+                        ratingCount={5}
+                        imageSize={12}
+                        onFinishRating={(r)=>setstarCount(r)}
+                        style={{ }}
+                    />
+                    <Text style={[styles.txtStyle,{fontSize:10,fontWeight:'400',color:colors.inpt}]} >{'  (47)'}</Text>
+                </View>
+            </View>
+            <View style={styles.BtnContMain} >
+                <TouchableOpacity style={styles.btnCont} >
+                    <Call />
+                    <Text style={styles.btnText} >Call</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.btnCont} >
+                    <Fav />
+                    <Text style={styles.btnText} >Save</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.btnCont} >
+                    <UploadBlack />
+                    <Text style={styles.btnText} >Share</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.btnCont} >
+                    <LocationBlack />
+                    <Text style={styles.btnText} >Direction</Text>
+                </TouchableOpacity>
+            </View>
+            <View style={{height:280,width:'100%'}} >
+                <TopTab/>
+            </View>
+            <GradientBorder
+                additional={[styles.mainLinea,{width:windowWidth - 50,alignSelf:'center'}]}
+                addInner={[styles.innerTouc,{width:windowWidth - 53,flexDirection:'row'}]}
+                // icon={true}
+                text={'BOOK NOW'}
+                txtStyle={{color:colors.gradient1,fontSize:20,fontWeight:'500'}}
+                onpress={()=>alert('sdsdf')}
+            />
+            <View style={{height:20}} />
           
 
         </ScrollView>
@@ -61,6 +116,9 @@ const styles = StyleSheet.create({
         height:'100%',
         marginTop:80
     },
+    BtnContMain:{width:'100%',height:60,flexDirection:'row',backgroundColor:'#FFFFFF',marginTop:25,borderColor:colors.blu,borderWidth:1},
+    btnCont:{borderLeftWidth:0.5,alignItems:'center',justifyContent:'center',borderColor:colors.blu,width:'25%',height:60},
+    btnText:{fontWeight:'400',color:colors.black,marginTop:4},
     ratingCard:{width:76,height:47,borderRadius:10,borderWidth:1,borderColor:colors.blu,alignItems:'center',justifyContent:'center'},
     divider:{borderWidth:0.5,width:'100%',marginTop:30,alignSelf:'center',borderColor:colors.blu},
     card : {width:'100%',flexDirection:'row',height:110,padding:10,backgroundColor:colors.white,borderRadius:8, marginTop:10 , elevation:2  },
@@ -68,8 +126,7 @@ const styles = StyleSheet.create({
       flex:10,
     //   alignItems:'center',
       backgroundColor:'#F5F5F5'
-    },
-    
+    },  
     see:{
         width:'100%',
         height:40,

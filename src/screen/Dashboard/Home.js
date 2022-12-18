@@ -159,7 +159,7 @@ function Home({navigation}) {
                         <Text style={[styles.name,{fontSize:12,color:colors.inpt,marginTop:6}]} >Cash</Text>
                     </View>
                     <View style={{flex:0.1}} >
-                        <TouchableOpacity onPress={()=>navigation.navigate('BusinessList')} >
+                        <TouchableOpacity onPress={()=>navigation.navigate( 'BusinessList')} >
                             <RightBlack/>
                         </TouchableOpacity>
                     </View>

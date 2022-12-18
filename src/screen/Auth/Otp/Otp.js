@@ -67,7 +67,7 @@ function OtpScreen({navigation}) {
                     Title1={'NEXT'}
                     style={styles.gB}
                     icon={true}
-                    onpress={()=>navigation.navigate('Home')}
+                    onpress={()=>navigation.navigate('Main')}
                 />
             </View>
 

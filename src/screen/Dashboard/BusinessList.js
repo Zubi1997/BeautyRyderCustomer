@@ -17,9 +17,9 @@ const SLIDER_WIDTH = Dimensions.get('window').width;
 const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.8);
 const ITEM_HEIGHT = Math.round(ITEM_WIDTH * 3 / 4);
 
-const arr = [
-    'Eyebrows','Upper Lip','Lower Lip','Chin','Neck','Neck','Mens Cheeks','Sideburns','Jaw Line','Forehead','Uni-brow','Full Face'
-]
+    const arr = [
+        'Eyebrows','Upper Lip','Lower Lip','Chin','Neck','Neck','Mens Cheeks','Sideburns','Jaw Line','Forehead','Uni-brow','Full Face'
+    ]
 
     const RadioBtn = ({text , toggle , onpress}) => {
         return(

@@ -371,6 +371,65 @@ const Logout_icon = ()=>{
             <SvgXml xml={xml}  />
     )}
 
+    const Call = ()=>{
+        const xml = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <path d="M2.85558 1.54889L3.40937 1L6.84976 4.44039C7.19772 4.78835 7.19772 5.34704 6.84976 5.695L5.58534 6.95942C5.23738 7.30737 5.23738 7.86607 5.58534 8.21403L9.79026 12.4189C10.1382 12.7669 10.6969 12.7669 11.0449 12.4189L12.3093 11.1545C12.6572 10.8066 13.2159 10.8066 13.5639 11.1545L16.8475 14.4381L16.0388 15.2467C13.7011 17.5844 9.91278 17.5844 7.57998 15.2467L2.86048 10.5272C0.380658 8.0474 0.380657 4.02872 2.85558 1.54889Z" stroke="#333333" stroke-miterlimit="10" stroke-linejoin="round"/>
+        </svg>`
+            return(
+            <SvgXml xml={xml}  />
+    )}
+
+    const Fav = ()=>{
+        const xml = `<svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
+        <path d="M18.1429 6.33333C18.1429 10.9048 13.1429 17 9.57143 17C6 17 1 10.9048 1 6.33333C1 3.38476 3.23571 1 6 1C7.4 1 8.67143 1.61714 9.57143 2.60762C10.4714 1.61714 11.7429 1 13.1429 1C15.9071 1 18.1429 3.38476 18.1429 6.33333Z" stroke="#333333" stroke-miterlimit="10"/>
+        <path d="M11.7144 4.80954C13.2929 4.80954 14.5715 6.17335 14.5715 7.85716" stroke="#333333" stroke-miterlimit="10"/>
+        </svg>`
+            return(
+            <SvgXml xml={xml}  />
+    )}
+
+    const UploadBlack = ()=>{
+        const xml = `<svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" viewBox="0 0 17 18" fill="none">
+        <path d="M16.3397 9.88239V15.4339C16.3397 16.2987 15.6822 17 14.8714 17H2.46822C1.65741 17 1 16.2987 1 15.4339V9.88239" stroke="#333333" stroke-miterlimit="10" stroke-linejoin="round"/>
+        <path d="M3.71753 6.29438L8.67005 1.01169L13.6226 6.29438" stroke="#333333" stroke-miterlimit="10" stroke-linejoin="round"/>
+        <path d="M8.66968 1V13.1665" stroke="#333333" stroke-miterlimit="10" stroke-linejoin="round"/>
+        </svg>`
+            return(
+            <SvgXml xml={xml}  />
+    )}
+
+    const LocationBlack = ()=>{
+        const xml = `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="18" viewBox="0 0 14 18" fill="none">
+        <path d="M7.2448 1C3.79975 1 1 3.96623 1 7.61613C1 10.3949 4.63239 14.7064 6.36012 16.603C6.84929 17.1323 7.65071 17.1323 8.13988 16.603C9.86761 14.7174 13.5 10.4059 13.5 7.61613C13.4896 3.96623 10.7003 1 7.2448 1ZM7.2448 9.8215C6.09992 9.8215 5.1632 8.82908 5.1632 7.61613C5.1632 6.40317 6.09992 5.41075 7.2448 5.41075C8.40008 5.41075 9.3264 6.40317 9.3264 7.61613C9.3264 8.82908 8.40008 9.8215 7.2448 9.8215Z" stroke="#333333"/>
+        </svg>`
+            return(
+            <SvgXml xml={xml}  />
+    )}
+
+    const Down = ()=>{
+        const xml = `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="7" viewBox="0 0 12 7" fill="none">
+        <path d="M11 1L6 6.01L1 1" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>`
+            return(
+            <SvgXml xml={xml}  />
+    )}
+
+    const Up = ()=>{
+        const xml = `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="7" viewBox="0 0 12 7" fill="none">
+        <path d="M1 6.01001L6 1.00001L11 6.01001" stroke="#E33895" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>`
+            return(
+            <SvgXml xml={xml}  />
+    )}
+
+    const Info = ()=>{
+        const xml = `<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+        <path d="M4 0C1.78857 0 0 1.78857 0 4C0 6.21143 1.78857 8 4 8C6.21143 8 8 6.21143 8 4C8 1.78857 6.21143 0 4 0ZM4.57143 6.25714C4.57143 6.57143 4.31429 6.82857 4 6.82857C3.68571 6.82857 3.42857 6.57143 3.42857 6.25714V3.95429C3.42857 3.64 3.68571 3.38286 4 3.38286C4.31429 3.38286 4.57143 3.64 4.57143 3.95429V6.25714ZM4 2.88571C3.52571 2.88571 3.14286 2.49714 3.14286 2.02857C3.14286 1.55429 3.52571 1.17143 4 1.17143C4.47429 1.17143 4.85714 1.55429 4.85714 2.02857C4.85714 2.49714 4.47429 2.88571 4 2.88571Z" fill="#B0B0B0"/>
+        </svg>`
+            return(
+            <SvgXml xml={xml}  />
+    )}
+
 const Dummy5 = ()=>{
     const xml = `
     
@@ -404,5 +463,10 @@ const Dummy5 = ()=>{
             LinearCross,
             RadioActive,
             RadioInactive,
-            GreyStar
+            GreyStar,
+            Call,
+            Fav,
+            UploadBlack,
+            LocationBlack,
+            Down,Up,Info
         };
