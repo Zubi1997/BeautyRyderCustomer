@@ -64,7 +64,7 @@ const s = [
   
 ]
 
-const Servic = ({title , detail , mainOption , subOption , updateArr , i}) => {
+const Servic = ({title , detail , mainOption , subOption , updateArr , i , navigation }) => {
 
   useEffect(() => {
     
@@ -113,8 +113,8 @@ const Servic = ({title , detail , mainOption , subOption , updateArr , i}) => {
         marginBottom : mainOption.length - 1 === i ? 200 : 0
       }} >
         <View style={{padding:20,flexDirection:'row',alignItems:'center'}} >
-          <View  style={{flex:2.2}} >
-            <TouchableOpacity>
+          <View  style={{flex:2.2}}  >
+            <TouchableOpacity onPress={()=>{navigation.navigate('')}} >
               <Text style={[styles.txtStyle,{fontSize:12,fontWeight:'500',color: detail ? colors.gradient1 : colors.text}]} >{title} <Info/> </Text>
             </TouchableOpacity>
           </View>
@@ -163,7 +163,7 @@ const Servic = ({title , detail , mainOption , subOption , updateArr , i}) => {
   )
 }
 
-export default function SerScreen() {
+export default function SerScreen({props}) {
 
   const [arr, setarr] = useState(s)
 
@@ -183,6 +183,7 @@ export default function SerScreen() {
                   subOption = {item.detail}
                   mainOption = {arr}
                   updateArr = {(val)=> setarr(val) }
+                  navigation = {props.navigation}
                 />
               )
             })}
