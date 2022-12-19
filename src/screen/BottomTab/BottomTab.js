@@ -78,6 +78,7 @@ function MyTabs() {
             ),
           }}
       />
+
       <Tab.Screen name="Services" component={ServiceStack}
         options={{
             headerShown : false,
@@ -90,6 +91,7 @@ function MyTabs() {
             ),
           }}
       />
+
       <Tab.Screen name="Plus" component={Services}
           options={{
             headerShown : false,
@@ -107,6 +109,7 @@ function MyTabs() {
             ),
           }}
       />
+
       <Tab.Screen name="Activity" component={Activity}
         options={{
             headerShown : false,
@@ -119,6 +122,7 @@ function MyTabs() {
             ),
           }}
       />
+
       <Tab.Screen name="Settings" component={Settings}
         options={{
             headerShown : false,
@@ -131,6 +135,7 @@ function MyTabs() {
             ),
           }}
       />
+      
     </Tab.Navigator>
   );
 }

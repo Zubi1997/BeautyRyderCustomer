@@ -1,9 +1,15 @@
 import React,{ useEffect , useState } from 'react'
 import { View , Text , StyleSheet , Dimensions } from 'react-native'
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import colors from '../../assets/colors'
 import  Header  from '../../Components/Header/Header'
+import  Font_style  from '../../assets/Font_style'
 var windowWidth = Dimensions.get('window').width
 var windowHeight=Dimensions.get('window').height
+
+
+const Tab = createMaterialTopTabNavigator();
+
 
 export default function ServiceDetail(props) {
 
@@ -23,10 +29,65 @@ export default function ServiceDetail(props) {
             option={false}
             title={'Service Detail'}
         />
-        <Text style={[styles.txtStyle,{padding:20,fontSize:12,color:colors.text,fontWeight:'400'}]} >Eyebrows</Text>
+        <Text style={[styles.txtStyle,{padding:20,fontSize:12,color:colors.text,fontFamily:Font_style.Poppins_Regular}]} >Eyebrows</Text>
+        <View style={{width:'100%',height:'100%'}} >
+            <Tab.Navigator
+                initialRouteName="Feed"
+                screenOptions={{
+                    tabBarActiveTintColor:colors.gradient1,
+                    // tabBarInactiveTintColor​:'black',
+                    // tabBarActiveTintColor : 'red',
+                    // tabBarIndicator:{alignSelf:'center'},
+                    tabBarIndicatorStyle : { width:50 ,alignSelf:'center',  backgroundColor : colors.gradient1 },
+                    tabBarLabelStyle: { fontSize: 10 , fontWeight : '400' },
+                    tabBarStyle: { backgroundColor: '#F5F5F5' , borderBottomWidth:1 , borderTopWidth : 1 , borderTopColor : colors.blu , borderBottomColor:colors.blu , height:40 , elevation:0   },
+                }}
+                >
+                <Tab.Screen
+                    name="About"
+                    component={About}
+                    // options={{ tabBarLabel: 'Services' }}
+                />
+                <Tab.Screen
+                    name="Price & Duration"
+                    component={PriceDura}
+                    // options={{ tabBarLabel: 'Services' }}
+                />
+                <Tab.Screen
+                    name="Photos"
+                    component={Photos}
+                    // options={{ tabBarLabel: 'Services' }}
+                />
+                
+            </Tab.Navigator>
+        </View>
     </View>
   )
 }
+
+const About = () => {
+    return(
+        <View>
+            <Text>About</Text>
+        </View>
+    )
+} 
+
+const PriceDura = () => {
+    return(
+        <View>
+            <Text>Price and Duration</Text>
+        </View>
+    )
+} 
+
+const Photos = () => {
+    return(
+        <View>
+            <Text>Photos</Text>
+        </View>
+    )
+} 
 
 const styles = StyleSheet.create({
     map: {

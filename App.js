@@ -24,12 +24,12 @@ const App = props => {
 
   return (
     <Provider store={reduxStore}>
-      <SafeAreaProvider>
+      {/* <SafeAreaProvider> */}
         {/* <StatusBar /> */}
         <MenuProvider>
           <AppNavigator />
         </MenuProvider>
-      </SafeAreaProvider>
+      {/* </SafeAreaProvider> */}
     </Provider>
   );
 };
