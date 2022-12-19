@@ -430,6 +430,42 @@ const Logout_icon = ()=>{
             <SvgXml xml={xml}  />
     )}
 
+    const Watch = ()=>{
+        const xml = `<svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6.74494 1C9.91821 1 12.4899 3.57168 12.4899 6.74494C12.4899 9.91821 9.91821 12.4899 6.74494 12.4899C3.57168 12.4899 1 9.91821 1 6.74494C1 3.57168 3.57168 1 6.74494 1Z" stroke="#E33895" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M10.0342 3.58926L7.26904 6.35444" stroke="#E33895" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M6.15387 6.48108L4.05713 5.26736" stroke="#E33895" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M6.74497 6.09763C6.38613 6.09763 6.09766 6.38962 6.09766 6.74494C6.09766 7.10378 6.38965 7.39226 6.74497 7.39226C7.10381 7.39226 7.39229 7.10026 7.39229 6.74494C7.39581 6.38962 7.10381 6.09763 6.74497 6.09763Z" stroke="#E33895" stroke-miterlimit="22.9256"/>
+        <path d="M6.74512 2.3826V2.78717" stroke="#E33895" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M2.38281 6.74493H2.78387" stroke="#E33895" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M6.74512 11.1108V10.7062" stroke="#E33895" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11.1106 6.74493H10.7061" stroke="#E33895" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>`
+            return(
+            <SvgXml xml={xml}  />
+    )}
+
+    const Calendar = ()=>{
+        const xml = `<svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.64 12H1.588C1.264 12 1 11.736 1 11.412V1.82402C1 1.50002 1.264 1.23602 1.588 1.23602H13.64C13.964 1.23602 14.228 1.50002 14.228 1.82402V11.412C14.228 11.736 13.968 12 13.64 12Z" stroke="#E33895" stroke-miterlimit="10" stroke-linejoin="round"/>
+        <path d="M11.9766 0V2.544" stroke="#E33895" stroke-miterlimit="10" stroke-linejoin="round"/>
+        <path d="M3.31641 2.544V0" stroke="#E33895" stroke-miterlimit="10" stroke-linejoin="round"/>
+        <path d="M1.01416 4.70004H14.2222" stroke="#E33895" stroke-miterlimit="10" stroke-linejoin="round"/>
+        <path d="M3.65965 6.92404H2.74365V7.84004H3.65965V6.92404Z" stroke="#E33895" stroke-miterlimit="10" stroke-linejoin="round"/>
+        <path d="M6.60106 6.92404H5.68506V7.84004H6.60106V6.92404Z" stroke="#E33895" stroke-miterlimit="10" stroke-linejoin="round"/>
+        <path d="M9.54393 6.92404H8.62793V7.84004H9.54393V6.92404Z" stroke="#E33895" stroke-miterlimit="10" stroke-linejoin="round"/>
+        <path d="M12.4839 6.92404H11.5679V7.84004H12.4839V6.92404Z" stroke="#E33895" stroke-miterlimit="10" stroke-linejoin="round"/>
+        <path d="M3.65965 9.26801H2.74365V10.184H3.65965V9.26801Z" stroke="#E33895" stroke-miterlimit="10" stroke-linejoin="round"/>
+        <path d="M6.60106 9.26801H5.68506V10.184H6.60106V9.26801Z" stroke="#E33895" stroke-miterlimit="10" stroke-linejoin="round"/>
+        <path d="M9.54393 9.26801H8.62793V10.184H9.54393V9.26801Z" stroke="#E33895" stroke-miterlimit="10" stroke-linejoin="round"/>
+        <path d="M12.4839 9.26801H11.5679V10.184H12.4839V9.26801Z" stroke="#E33895" stroke-miterlimit="10" stroke-linejoin="round"/>
+        </svg>
+        `
+            return(
+            <SvgXml xml={xml}  />
+    )}
+
+
 const Dummy5 = ()=>{
     const xml = `
     
@@ -468,5 +504,6 @@ const Dummy5 = ()=>{
             Fav,
             UploadBlack,
             LocationBlack,
-            Down,Up,Info
+            Down,Up,Info,
+            Watch, Calendar
         };
