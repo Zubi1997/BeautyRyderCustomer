@@ -4,6 +4,7 @@ import BusinessList from '../Dashboard/BusinessList';
 import Services from '../Dashboard/Services';
 import SerScreen from '../Dashboard/SerScreen';
 import ScreenDetail from '../Dashboard/ServiceDetail';
+import Map from '../Dashboard/Map';
 import Activity from '../Dashboard/Activity';
 import Settings from '../Dashboard/Setting';
 import { Image,Text } from 'react-native';
@@ -44,6 +45,11 @@ const ServiceStack = () =>{
         }}
       />
       <Stack.Screen  name="ScreenDetail" component={ScreenDetail}
+        options={{
+          headerShown : false
+        }}
+      />
+       <Stack.Screen  name="Map" component={Map}
         options={{
           headerShown : false
         }}

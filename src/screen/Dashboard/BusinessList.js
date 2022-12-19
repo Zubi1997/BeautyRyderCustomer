@@ -83,6 +83,7 @@ function BusinessList({navigation}) {
     const [tmil, settmil] = useState(true);
     const [thmil, setthmil] = useState(false);
     const [fmil, setfmil] = useState(false);
+    const [starCount, setstarCount] = useState(5);
 
    
     const toggleModal = () => {
@@ -120,7 +121,7 @@ function BusinessList({navigation}) {
                                     />
                                     <Text style={[styles.txtStyle,{fontSize:10,fontWeight:'400',color:colors.inpt}]} >  |   3.4 mi</Text>
                                 </View>
-                                <View style={{flexDirection:'row',alignItems:'center'}} >
+                                <View style={{flexDirection:'row',alignItems:'center',justifyContent:'center'}} >
                                     <GradientButton
                                         Title1={'BOOK NOW'}
                                         style={styles.gB}
