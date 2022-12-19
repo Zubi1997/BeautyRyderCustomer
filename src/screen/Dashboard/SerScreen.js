@@ -163,7 +163,7 @@ const Servic = ({title , detail , mainOption , subOption , updateArr , i , navig
   )
 }
 
-export default function SerScreen({props}) {
+export default function SerScreen(props) {
 
   const [arr, setarr] = useState(s)
 
