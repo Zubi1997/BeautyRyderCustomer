@@ -28,7 +28,7 @@ const ITEM_HEIGHT = Math.round(ITEM_WIDTH * 3 / 4);
                 <TouchableOpacity onPress={()=>onpress()} >
                     {toggle?
                         <RadioActive/>
-                        :
+                    :
                         <RadioInactive/>
                     }
                 </TouchableOpacity>

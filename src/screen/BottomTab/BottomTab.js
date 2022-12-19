@@ -3,6 +3,7 @@ import Home from '../Dashboard/Home';
 import BusinessList from '../Dashboard/BusinessList';
 import Services from '../Dashboard/Services';
 import SerScreen from '../Dashboard/SerScreen';
+import ScreenDetail from '../Dashboard/ServiceDetail';
 import Activity from '../Dashboard/Activity';
 import Settings from '../Dashboard/Setting';
 import { Image,Text } from 'react-native';
@@ -32,6 +33,26 @@ const HomeStack = () =>{
   )
 }
 
+const ServiceStack = () =>{
+  return(
+    <Stack.Navigator
+      initialRouteName="Services"
+    >
+      <Stack.Screen  name="Services" component={SerScreen}  
+        options={{
+          headerShown : false
+        }}
+      />
+      <Stack.Screen  name="ScreenDetail" component={ScreenDetail}
+        options={{
+          headerShown : false
+        }}
+      />
+    </Stack.Navigator>
+  )
+}
+
+
 function MyTabs() {
   return (
     <Tab.Navigator
@@ -57,7 +78,7 @@ function MyTabs() {
             ),
           }}
       />
-      <Tab.Screen name="Services" component={SerScreen}
+      <Tab.Screen name="Services" component={ServiceStack}
         options={{
             headerShown : false,
             tabBarLabel: ({focused}) => (<Text style={{ fontSize: 10, color:focused ? colors.gradient1 : colors.inpt, fontWeight: '400',top:-20 }}> Services </Text> ) ,

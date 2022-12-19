@@ -6,24 +6,25 @@ import { HeartIcon , RoboIcon, Option ,LeftBlack } from '../../assets/Svgs/svg_i
 var windowWidth = Dimensions.get('window').width
 var windowHeight=Dimensions.get('window').height
 
-const Header = ({text , Icon , add , onpress , option}) => {
+const Header = ({text , Icon , add , onpress , option , title}) => {
     return(
         <View
             style={styles.header}
         >
-            <View style={{flex:0.1}} >
-                <TouchableOpacity onPress={()=>onpress()} >
+            <View style={{flex:0.4,flexDirection:'row',alignItems:'center'}} >
+                <TouchableOpacity style={{alignItems:'center'}} onPress={()=>onpress()} >
                     <LeftBlack/>
                 </TouchableOpacity>
-            </View>
-            <View style={{flex:0.8}} >
                 <Text style={styles.name} >  Back</Text>
             </View>
-            {option && 
-                <View style={{flex:0.2 , flexDirection:'row' , justifyContent:'flex-end'}} >
+            <View style={{flex:0.7,alignItems:'center'}} >
+                <Text style={styles.name} >{title}</Text>
+            </View>
+                <View style={{flex:0.4 , flexDirection:'row' , justifyContent:'flex-end'}} >
+                {option && 
                     <Option/>
+                }
                 </View>
-            }
         </View>
     )
 }

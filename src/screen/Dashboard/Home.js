@@ -116,18 +116,20 @@ function Home({navigation}) {
 
             <View style={{width:'90%',marginTop:23,alignSelf:'center'}} >
                 <Text style={styles.heading} >Explore by Service</Text>
-                <FlatList
-                    data={arr}
-                    contentContainerStyle={{marginTop:4}}
-                    // horizontal
-                    numColumns={4}
-                    renderItem={({item})=>
-                        <View style={{alignItems:'center',marginHorizontal:8,marginTop:15}} >
-                            <View style={{width:76,height:76,borderRadius:100,backgroundColor:colors.blu}} />
-                            <Text style={{color:colors.text,marginTop:5,textAlign:'center'}} >{item}</Text>
-                        </View>
-                    }
-                />
+                <View style={{width: windowWidth - 20}} >
+                    <FlatList
+                        data={arr}
+                        contentContainerStyle={{marginTop:4}}
+                        // horizontal
+                        numColumns={4}
+                        renderItem={({item})=>
+                            <View style={{alignItems:'center',marginHorizontal:8,marginTop:15}} >
+                                <View style={{width:windowWidth - 340,height:76,borderRadius:100,backgroundColor:colors.blu}} />
+                                <Text style={{color:colors.text,marginTop:5,textAlign:'center'}} >{item}</Text>
+                            </View>
+                        }
+                    />
+                </View>
                 <TouchableOpacity style={styles.see} >
                     <Text style={[styles.txtStyle,{fontSize:14,fontWeight:'400',alignSelf:'center',color:colors.inpt}]} >SEE MORE</Text>
                 </TouchableOpacity>
