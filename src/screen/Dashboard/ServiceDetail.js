@@ -29,7 +29,7 @@ export default function ServiceDetail(props) {
             option={false}
             title={'Service Detail'}
         />
-        <Text style={[styles.txtStyle,{padding:20,fontSize:12,color:colors.text,fontFamily:Font_style.Poppins_Regular}]} >Eyebrows</Text>
+        <Text style={[styles.txtStyle,{padding:20,fontSize:12,color:colors.text,fontWeight:'100',fontFamily:Font_style.Poppins_Bold}]} >Eyebrows</Text>
         <View style={{width:'100%',height:'100%'}} >
             <Tab.Navigator
                 initialRouteName="Feed"
