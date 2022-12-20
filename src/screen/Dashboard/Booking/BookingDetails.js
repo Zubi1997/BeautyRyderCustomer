@@ -1,12 +1,16 @@
 import React, { useState } from 'react'
-import { ScrollView, StyleSheet, View, Text, FlatList, TouchableOpacity, TextInput, TouchableHighlight, KeyboardAvoidingView, Platform } from 'react-native'
+import { ScrollView, StyleSheet, View, Text, FlatList, TouchableOpacity, TextInput, KeyboardAvoidingView, Platform } from 'react-native'
 import colors from '../../../assets/colors';
 import Font_style from '../../../assets/Font_style';
-import { Calendar, Location, Watch } from '../../../assets/Svgs/svg_icons';
+import { Apple_icon, Calendar, CardIcon, GooglePayIcon, Info, Location, Watch } from '../../../assets/Svgs/svg_icons';
 import Header from '../../../Components/Header/Header'
+import { Modal } from '../../../Components/Modal';
 
 
 function BokingDetails({ navigation }) {
+
+  const [showAdditionalChargesModal, setShowAdditionalChargesModal] = useState(false);
+  const [showPaymentOptionsModal, setShowPaymentOptionsModal] = useState(false);
 
   const services = [
     { name: 'Cheeks', duration: '20 Min', price: '$20.00' },
@@ -14,6 +18,65 @@ function BokingDetails({ navigation }) {
     { name: 'Sideburns', duration: '20 Min', price: '$15.00' },
     { name: 'Jaw Line', duration: '20 Min', price: '$10.00' },
   ]
+
+  const AdditionalChargesModal = () => (
+    <Modal visible={showAdditionalChargesModal} onRequestClose={() => setShowAdditionalChargesModal(false)}>
+      <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 20 }}>
+        <Text style={styles.name}>
+          Additional Charges
+        </Text>
+        <View style={{ paddingLeft: 10 }}>
+          <Info />
+        </View>
+      </View>
+      <Text style={[styles.details, styles.note, { marginTop: 5 }]}>
+        NOTE: Additional wait time may apply to your booking if the beautician
+        waited 5 minutes: $1 per minute
+      </Text>
+      <Text style={[styles.details, styles.note, { marginTop: 3 }]}>
+        NOTE: Additional mileage charges may apply if beautician distance more
+        than 2 mileage: $2 per mileage
+      </Text>
+    </Modal>
+  )
+
+  const onPressContinue = () => { 
+    setShowPaymentOptionsModal(false);
+    navigation.navigate('SavedCards')
+  }
+
+  const PaymentOptionsModal = () => {
+    const [selectedPaymentOption, setSelectedPaymentOption] = useState(null);
+    const paymentOptions = [
+      { id: 1, name: '', icon: <CardIcon /> },
+      { id: 2, name: "ApplePay", icon: <Apple_icon /> },
+      { id: 3, name: 'Google Pay', icon: <GooglePayIcon /> },
+    ]
+
+    return (
+      <Modal visible={showPaymentOptionsModal} onRequestClose={() => setShowPaymentOptionsModal(false)}>
+        <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 20 }}>
+          <Text style={[styles.name, { marginTop: 20 }]}>
+            Choose your Payments Option
+          </Text>
+        </View>
+        <Text style={[styles.details, { marginTop: 2 }]}>
+          Select any one option suitable for you to complete the payment process
+        </Text>
+        {paymentOptions.map((item, i) => (
+          <TouchableOpacity key={i} style={[styles.paymentRow, { borderColor: selectedPaymentOption === item.id ? colors.gradient1 : colors.blu }]} onPress={() => setSelectedPaymentOption(item.id)}>
+            {item.icon}
+            <Text style={[styles.details, { color: colors.text, marginLeft: 12 }]}>
+              {item.name}
+            </Text>
+          </TouchableOpacity>
+        ))}
+        <TouchableOpacity style={[styles.confirmButton, {marginBottom: 0}]} onPress={onPressContinue}>
+          <Text style={styles.confirmButtonText}>CONTINUE</Text>
+        </TouchableOpacity>
+      </Modal>
+    )
+  }
 
   const renderServiceItem = ({ item, i }) => (
     <View style={styles.serviceItem} key={i}>
@@ -31,7 +94,9 @@ function BokingDetails({ navigation }) {
         onpress={() => navigation.goBack()}
         text="Booking Details"
       />
-      <KeyboardAvoidingView behavior={Platform.OS === 'android' ? 'height': 'padding'}>
+      <AdditionalChargesModal />
+      <PaymentOptionsModal />
+      <KeyboardAvoidingView behavior={Platform.OS === 'android' ? 'height' : 'padding'}>
         <ScrollView style={{ paddingHorizontal: 20, backgroundColor: colors.grey }} >
           <Text style={{ marginTop: 10, ...styles.name }}>
             Beautician name
@@ -81,9 +146,14 @@ function BokingDetails({ navigation }) {
               renderItem={renderServiceItem}
             />
             <View style={[styles.service, { marginTop: 15, marginBottom: 0 }]}>
-              <Text style={styles.name}>
-                Additional Charges
-              </Text>
+              <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                <Text style={styles.name}>
+                  Additional Charges
+                </Text>
+                <TouchableOpacity style={{ paddingLeft: 10 }} onPress={() => setShowAdditionalChargesModal(true)}>
+                  <Info />
+                </TouchableOpacity>
+              </View>
               <Text style={[styles.name, { fontSize: 14 }]}>
                 $6.40
               </Text>
@@ -118,7 +188,7 @@ function BokingDetails({ navigation }) {
               <Text style={[styles.name, { color: colors.white }]}>Checks</Text>
             </TouchableOpacity>
           </View>
-          <TouchableOpacity style={styles.confirmButton}>
+          <TouchableOpacity style={[styles.confirmButton]} onPress={() => setShowPaymentOptionsModal(true)}>
             <Text style={styles.confirmButtonText}>CONFIRM</Text>
           </TouchableOpacity>
         </ScrollView>
@@ -217,18 +287,31 @@ const styles = StyleSheet.create({
     height: 45
   },
   confirmButton: {
-    flex: 1,
     borderWidth: 1,
     borderColor: colors.gradient2,
     paddingVertical: 21,
     marginTop: 20,
     borderRadius: 4,
-    marginBottom: 100,
+    marginBottom: 200,
   },
   confirmButtonText: {
     fontSize: 20,
     fontFamily: Font_style.Poppins_Medium,
     color: colors.gradient1,
     alignSelf: 'center',
+  },
+  note: {
+    fontSize: 10,
+    textAlign: 'justify',
+  },
+  paymentRow: {
+    height: 70,
+    borderRadius: 10,
+    borderColor: colors.blu,
+    borderWidth: 1,
+    marginTop: 15,
+    flexDirection: 'row',
+    padding: 20,
+    alignItems: 'center',
   }
 });
