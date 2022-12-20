@@ -7,6 +7,8 @@ import ScreenDetail from '../Dashboard/ServiceDetail';
 import Map from '../Dashboard/Map';
 import Activity from '../Dashboard/Activity';
 import Settings from '../Dashboard/Setting';
+import BookingActivity from '../Dashboard/BookingActivity';
+import Message from '../Dashboard/Message';
 import { Image,Text } from 'react-native';
 import colors from '../../assets/colors';
 import LinearGradient from 'react-native-linear-gradient';
@@ -49,11 +51,37 @@ const ServiceStack = () =>{
           headerShown : false
         }}
       />
-       <Stack.Screen  name="Map" component={Map}
+      <Stack.Screen  name="Map" component={Map}
+      options={{
+        headerShown : false
+      }}
+      />
+    </Stack.Navigator>
+  )
+}
+
+const ActivityStack = () =>{
+  return(
+    <Stack.Navigator
+      initialRouteName="Activity"
+    >
+       <Stack.Screen  name="Activity" component={Activity}  
         options={{
           headerShown : false
         }}
       />
+      <Stack.Screen  name="BookingActivity" component={BookingActivity}  
+        options={{
+          headerShown : false
+        }}
+      />
+      <Stack.Screen  name="Message" component={Message}  
+        options={{
+          headerShown : false
+        }}
+      />
+
+      
     </Stack.Navigator>
   )
 }
@@ -116,7 +144,7 @@ function MyTabs() {
           }}
       />
 
-      <Tab.Screen name="Activity" component={Activity}
+      <Tab.Screen name="Activity" component={ActivityStack}
         options={{
             headerShown : false,
             tabBarLabel: ({focused}) => (<Text style={{ fontSize: 10, color:focused ? colors.gradient1 : colors.inpt, fontWeight: '400',top:-20 }}> Activity </Text> ) ,

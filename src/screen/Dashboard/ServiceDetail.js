@@ -1,5 +1,5 @@
 import React,{ useEffect , useState } from 'react'
-import { View , Text , StyleSheet , Dimensions , Image  ,Pressable } from 'react-native'
+import { View , Text , StyleSheet , Dimensions , Image  ,TouchableOpacity,Pressable } from 'react-native'
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import colors from '../../assets/colors'
 import  Header  from '../../Components/Header/Header'
@@ -7,7 +7,6 @@ import  Font_style  from '../../assets/Font_style'
 var windowWidth = Dimensions.get('window').width
 var windowHeight=Dimensions.get('window').height
 import { Pic2 , Pic1 } from '../../assets/Svgs/svg_images';
-import { TouchableOpacity } from 'react-native-gesture-handler';
 
 
 const Tab = createMaterialTopTabNavigator();

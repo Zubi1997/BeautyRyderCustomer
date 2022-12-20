@@ -56,7 +56,7 @@ export default function Activity(props) {
                     <ViewList/>
                   </TouchableOpacity>
                   <View>
-                  <ScrollView horizontal >
+                  <ScrollView contentContainerStyle={{paddingRight:20}} horizontal >
                       {[1,2,3,4,5,6,7,8,1].map((item,index)=>{
                           return(
                               <View key={index} style={styles.card} >
@@ -87,7 +87,7 @@ export default function Activity(props) {
                                               // icon={true}
                                               gStyle={{borderRadius:100}}
                                               txtstyle={[styles.txtStyle,{color:colors.white,fontSize:10,fontWeight:'400'}]}
-                                              onpress={()=>setModalVisible(!isModalVisible)}
+                                              onpress={()=>props.navigation.navigate('BookingActivity')}
                                           />
                                           <LinearGradient
                                               colors={[colors.gradient1,colors.gradient2]}

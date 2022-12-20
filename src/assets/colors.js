@@ -17,7 +17,8 @@ const colors = {
   bordr:'#D2D1DB',
   blu:'#E2E9EE',
   inpt : '#B0B0B0',
-  inptCont:'#F7F8FA'
+  inptCont:'#F7F8FA',
+  lightgrey4:'#DADADA',
 };
 
 export default colors

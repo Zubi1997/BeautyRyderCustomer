@@ -448,6 +448,27 @@ const ViewList = ()=>{
         <SvgXml xml={xml}  />
     
     )}
+
+    const Calendar = ()=>{
+        const xml = `<svg xmlns="http://www.w3.org/2000/svg" width="15" height="13" viewBox="0 0 15 13" fill="none">
+        <path d="M13.64 12H1.588C1.264 12 1 11.736 1 11.412V1.82403C1 1.50003 1.264 1.23603 1.588 1.23603H13.64C13.964 1.23603 14.228 1.50003 14.228 1.82403V11.412C14.228 11.736 13.968 12 13.64 12Z" stroke="white" stroke-miterlimit="10" stroke-linejoin="round"/>
+        <path d="M11.9766 0V2.544" stroke="white" stroke-miterlimit="10" stroke-linejoin="round"/>
+        <path d="M3.31641 2.544V0" stroke="white" stroke-miterlimit="10" stroke-linejoin="round"/>
+        <path d="M1.01416 4.70004H14.2222" stroke="white" stroke-miterlimit="10" stroke-linejoin="round"/>
+        <path d="M3.65965 6.92403H2.74365V7.84003H3.65965V6.92403Z" stroke="white" stroke-miterlimit="10" stroke-linejoin="round"/>
+        <path d="M6.60106 6.92404H5.68506V7.84004H6.60106V6.92404Z" stroke="white" stroke-miterlimit="10" stroke-linejoin="round"/>
+        <path d="M9.54393 6.92404H8.62793V7.84004H9.54393V6.92404Z" stroke="white" stroke-miterlimit="10" stroke-linejoin="round"/>
+        <path d="M12.4839 6.92404H11.5679V7.84004H12.4839V6.92404Z" stroke="white" stroke-miterlimit="10" stroke-linejoin="round"/>
+        <path d="M3.65965 9.26799H2.74365V10.184H3.65965V9.26799Z" stroke="white" stroke-miterlimit="10" stroke-linejoin="round"/>
+        <path d="M6.60106 9.26799H5.68506V10.184H6.60106V9.26799Z" stroke="white" stroke-miterlimit="10" stroke-linejoin="round"/>
+        <path d="M9.54393 9.26799H8.62793V10.184H9.54393V9.26799Z" stroke="white" stroke-miterlimit="10" stroke-linejoin="round"/>
+        <path d="M12.4839 9.26799H11.5679V10.184H12.4839V9.26799Z" stroke="white" stroke-miterlimit="10" stroke-linejoin="round"/>
+        </svg>`
+            return(
+            <SvgXml xml={xml}  />
+        
+        )}
+    
         export  {
             Google_icon,
             Facebook_icon,
@@ -478,5 +499,6 @@ const ViewList = ()=>{
             Fav,
             UploadBlack,
             LocationBlack,
-            Down,Up,Info,ViewList
+            Down,Up,Info,ViewList,
+            Calendar
         };
