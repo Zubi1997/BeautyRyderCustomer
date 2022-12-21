@@ -22,7 +22,7 @@ export default function Text_normal({
 
   return (
     <View >
-        <Text style={styles.text}>{text} </Text>
+        <Text style={[styles.text,style]}>{text} </Text>
     </View>
 
 

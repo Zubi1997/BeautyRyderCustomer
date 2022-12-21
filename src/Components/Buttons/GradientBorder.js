@@ -31,7 +31,7 @@ export default function GradientBorder({additional , addInner , onpress , text ,
   )
 }
 const styles = StyleSheet.create({
-    mainLinea:{width:windowWidth -40,height:60,borderRadius:4,marginTop:30,alignItems:'center',justifyContent:'center'},
-    innerTouc:{width:windowWidth -43,height:57,backgroundColor:colors.white,borderRadius:4,alignItems:'center',justifyContent:'center'},
+    mainLinea:{width:windowWidth -40,height:50,borderRadius:4,marginTop:30,alignItems:'center',justifyContent:'center'},
+    innerTouc:{width:windowWidth -43,height:47,backgroundColor:colors.white,borderRadius:4,alignItems:'center',justifyContent:'center'},
     txt:{color:colors.gradient1,fontSize:20,fontWeight:'500'}
 });

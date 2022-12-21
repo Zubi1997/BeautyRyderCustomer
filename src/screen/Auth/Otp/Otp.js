@@ -97,8 +97,8 @@ const styles = StyleSheet.create({
         height:60,
         alignSelf:'center'
       },
-    mainLinea:{width:windowWidth -40,height:60,borderRadius:4,marginTop:30,alignItems:'center',justifyContent:'center'},
-    innerTouc:{width:windowWidth -43,height:57,backgroundColor:colors.white,borderRadius:4,alignItems:'center',justifyContent:'center'},
+    mainLinea:{width:windowWidth -40,height:50,borderRadius:4,marginTop:30,alignItems:'center',justifyContent:'center'},
+    innerTouc:{width:windowWidth -43,height:47,backgroundColor:colors.white,borderRadius:4,alignItems:'center',justifyContent:'center'},
     btn:{width:295,height:60,borderWidth:2,borderRadius:4,borderColor:colors.white},
     phonetxt: {
         // textAlign:  'right' ,

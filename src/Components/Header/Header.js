@@ -8,7 +8,7 @@ import { getStatusBarHeight } from 'react-native-status-bar-height';
 
 const Header = ({ text, Icon, add, onpress, option }) => {
     return (
-        <View style={{ ...styles.header, paddingTop: getStatusBarHeight() + 25 }} >
+        <View style={{ ...styles.header, paddingTop: getStatusBarHeight() }} >
             <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                 <TouchableOpacity style={{ paddingRight: 10 }} onPress={() => onpress()} >
                     <LeftBlack />

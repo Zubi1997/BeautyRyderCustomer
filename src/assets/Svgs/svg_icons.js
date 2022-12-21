@@ -430,7 +430,79 @@ const Logout_icon = ()=>{
             <SvgXml xml={xml}  />
     )}
 
+const Simple_rightArrow = ()=>{
+    const xml = `
+    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M1 1L7 7.16149L1 13.1242" stroke="#B0B0B0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    `
+        return(
+        <SvgXml xml={xml}  />
+    
+    )}
+    
+const Camera_icon = ()=>{
+    const xml = `
+    <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M5.56641 2.74002V14.3334" stroke="white" stroke-miterlimit="10" stroke-linejoin="round"/>
+    <path d="M10.6196 5.46667C8.9329 5.46667 7.55957 6.84001 7.55957 8.52667C7.55957 10.2133 8.9329 11.5867 10.6196 11.5867C12.3062 11.5867 13.6796 10.2133 13.6796 8.52667C13.6796 6.84001 12.3129 5.46667 10.6196 5.46667Z" stroke="white" stroke-miterlimit="10" stroke-linejoin="round"/>
+    <path d="M15.3667 14.3333H2.64C1.73333 14.3333 1 13.6 1 12.6933V4.36667C1 3.46 1.73333 2.72667 2.64 2.72667H6.78L7.93333 1.26C8.06 1.09333 8.26 1 8.47333 1H12.7733C12.9867 1 13.18 1.09333 13.3133 1.26L14.4667 2.72667H15.3733C16.28 2.72667 17.0133 3.46 17.0133 4.36667V12.6933C17.0067 13.6 16.2733 14.3333 15.3667 14.3333Z" stroke="white" stroke-miterlimit="10" stroke-linejoin="round"/>
+    </svg>
+    `
+        return(
+        <SvgXml xml={xml}  />
+    
+    )}
+const Voucher_icon = ()=>{
+    const xml = `
+    <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10.43 4.9975L6.73 1.2475C6.4 0.9175 5.87 0.9175 5.54 1.2475L1.83 4.9975C1.3 5.5275 1 6.2575 1 7.0075V19.3075C1 20.2375 1.76 20.9975 2.69 20.9975H9.57C10.5 20.9975 11.26 20.2375 11.26 19.3075V7.0075C11.26 6.2575 10.96 5.5275 10.43 4.9975ZM6.13 4.8875C5.6 4.8875 5.17 4.4575 5.17 3.9275C5.17 3.3975 5.6 2.9675 6.13 2.9675C6.66 2.9675 7.09 3.3975 7.09 3.9275C7.09 4.4575 6.66 4.8875 6.13 4.8875Z" stroke="url(#paint0_linear_117_1228)" stroke-miterlimit="10" stroke-linejoin="round"/>
+    <path d="M3.88 13.6275C4.36601 13.6275 4.76 13.2335 4.76 12.7475C4.76 12.2615 4.36601 11.8675 3.88 11.8675C3.39399 11.8675 3 12.2615 3 12.7475C3 13.2335 3.39399 13.6275 3.88 13.6275Z" stroke="url(#paint1_linear_117_1228)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M8.29016 13.6275C8.77617 13.6275 9.17016 13.2335 9.17016 12.7475C9.17016 12.2615 8.77617 11.8675 8.29016 11.8675C7.80415 11.8675 7.41016 12.2615 7.41016 12.7475C7.41016 13.2335 7.80415 13.6275 8.29016 13.6275Z" stroke="url(#paint2_linear_117_1228)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M4.75977 9.69751L7.27977 15.3375" stroke="url(#paint3_linear_117_1228)" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M3 6.83749H3.96" stroke="#E33895" stroke-miterlimit="10" stroke-linejoin="round"/>
+    <path d="M4.50977 6.83749H5.46977" stroke="#E33895" stroke-miterlimit="10" stroke-linejoin="round"/>
+    <path d="M6.01953 6.83749H6.97953" stroke="#E33895" stroke-miterlimit="10" stroke-linejoin="round"/>
+    <path d="M7.53027 6.83749H8.48027" stroke="#E33895" stroke-miterlimit="10" stroke-linejoin="round"/>
+    <path d="M9.03027 6.83749H9.99027" stroke="#E33895" stroke-miterlimit="10" stroke-linejoin="round"/>
+    <path d="M3 18.4375H3.96" stroke="#79489D" stroke-miterlimit="10" stroke-linejoin="round"/>
+    <path d="M4.50977 18.4375H5.46977" stroke="#79489D" stroke-miterlimit="10" stroke-linejoin="round"/>
+    <path d="M6.01953 18.4375H6.97953" stroke="#79489D" stroke-miterlimit="10" stroke-linejoin="round"/>
+    <path d="M7.53027 18.4375H8.48027" stroke="#79489D" stroke-miterlimit="10" stroke-linejoin="round"/>
+    <path d="M9.03027 18.4375H9.99027" stroke="#79489D" stroke-miterlimit="10" stroke-linejoin="round"/>
+    <defs>
+    <linearGradient id="paint0_linear_117_1228" x1="6.13" y1="1" x2="6.13" y2="20.9975" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#E33895"/>
+    <stop offset="1" stop-color="#79489D"/>
+    </linearGradient>
+    <linearGradient id="paint1_linear_117_1228" x1="3.88" y1="11.8675" x2="3.88" y2="13.6275" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#E33895"/>
+    <stop offset="1" stop-color="#79489D"/>
+    </linearGradient>
+    <linearGradient id="paint2_linear_117_1228" x1="8.29016" y1="11.8675" x2="8.29016" y2="13.6275" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#E33895"/>
+    <stop offset="1" stop-color="#79489D"/>
+    </linearGradient>
+    <linearGradient id="paint3_linear_117_1228" x1="6.01977" y1="9.69751" x2="6.01977" y2="15.3375" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#E33895"/>
+    <stop offset="1" stop-color="#79489D"/>
+    </linearGradient>
+    </defs>
+    </svg>
+    `
+        return(
+        <SvgXml xml={xml}  />
+    
+    )}
 const Dummy5 = ()=>{
+    const xml = `
+    
+    `
+        return(
+        <SvgXml xml={xml}  />
+    
+    )}
+const Dummy7 = ()=>{
     const xml = `
     
     `
@@ -468,5 +540,10 @@ const Dummy5 = ()=>{
             Fav,
             UploadBlack,
             LocationBlack,
-            Down,Up,Info
+            Down,
+            Up,
+            Info,
+            Simple_rightArrow,
+            Camera_icon,
+            Voucher_icon
         };
