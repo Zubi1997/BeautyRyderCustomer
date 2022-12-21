@@ -7,6 +7,7 @@ import LinearGradient from 'react-native-linear-gradient';
 var windowWidth = Dimensions.get('window').width
 var windowHeight=Dimensions.get('window').height
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const a = [
     {
@@ -53,11 +54,13 @@ const notification = [
       count : 2  
     },
     {
-        text : '50% OFF in Ultraboost All terrain lpsum containing Lorem Ipsum passages',
+        promo : '50% OFF',
+        text : ' in Ultraboost All terrain lpsum containing Lorem Ipsum passages',
         time : '9:35 AM' 
     },
     {
-        text : '50% OFF in Ultraboost All terrain lpsum containing Lorem Ipsum passages',
+        promo : '50% OFF',
+        text : ' in Ultraboost All terrain lpsum containing Lorem Ipsum passages',
         time : '9:35 AM' 
     },
     {
@@ -65,27 +68,33 @@ const notification = [
         count : 2  
     },
     {
-        text : '50% OFF in Ultraboost All terrain lpsum containing Lorem Ipsum passages',
+        promo : '50% OFF',
+        text : ' in Ultraboost All terrain lpsum containing Lorem Ipsum passages',
         time : '9:35 AM' 
     },
     {
-        text : '50% OFF in Ultraboost All terrain lpsum containing Lorem Ipsum passages',
+        promo : '50% OFF',
+        text : ' in Ultraboost All terrain lpsum containing Lorem Ipsum passages',
         time : '9:35 AM' 
     },
     {
-        text : '50% OFF in Ultraboost All terrain lpsum containing Lorem Ipsum passages',
+        promo : '50% OFF',
+        text : ' in Ultraboost All terrain lpsum containing Lorem Ipsum passages',
         time : '9:35 AM' 
     },
     {
-        text : '50% OFF in Ultraboost All terrain lpsum containing Lorem Ipsum passages',
+        promo : '50% OFF',
+        text : ' in Ultraboost All terrain lpsum containing Lorem Ipsum passages',
         time : '9:35 AM' 
     },
     {
-        text : '50% OFF in Ultraboost All terrain lpsum containing Lorem Ipsum passages',
+        promo : '50% OFF',
+        text : ' in Ultraboost All terrain lpsum containing Lorem Ipsum passages',
         time : '9:35 AM' 
     },
     {
-        text : '50% OFF in Ultraboost All terrain lpsum containing Lorem Ipsum passages',
+        promo : '50% OFF',
+        text : ' in Ultraboost All terrain lpsum containing Lorem Ipsum passages',
         time : '9:35 AM' 
     },
 
@@ -93,7 +102,22 @@ const notification = [
   
 ]
 
+const notificationDetail = [
+    {
+        time : 'Sun, 20 Nov, 6:48 AM',
+        text1 : 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries',
+        text2 : 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries'
+    },
+    {
+        time : 'Sun, 20 Nov, 6:48 AM',
+        text1 : 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries',
+        text2 : 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries'
+    },
+  
+]
+
 const Tab = createMaterialTopTabNavigator();
+const Stack = createNativeStackNavigator();
 
 const Messag = () => {
     return(
@@ -176,7 +200,29 @@ const Messag = () => {
     )
 }
 
-const Notifications = () => {
+const NotifDetail = () => {
+    return(
+        <View style={{width:'100%',height:'100%'}} >
+             <View style={{width:'90%',height:'60%',alignSelf:'center'}} >
+            <ScrollView contentContainerStyle={{paddingBottom:30}} >
+                {notificationDetail.map((item)=>{
+                    return(
+                        <>
+                            <Text style={[styles.textstyle,{color:colors.text,fontFamily:Font_style.Poppins_Regular,fontSize:12,alignSelf:'center',marginTop:25}]} >{item.time}</Text>
+                            <View style={{width:'90%',alignSelf:'center',borderRadius:20,backgroundColor:colors.white,padding:20,marginTop:4}} >
+                                <Text style={[styles.textstyle,{fontSize:10,fontFamily:Font_style.Poppins_Regular}]} >{item.text1}</Text>
+                                <Text style={[styles.textstyle,{fontSize:10,fontFamily:Font_style.Poppins_Regular}]} >{item.text2}</Text>
+                            </View>
+                        </>
+                    )
+                })}
+            </ScrollView>
+           </View>
+        </View>
+    )
+}
+
+const Notifications = (props) => {
     return(
         <View style={{width:'100%',height:'100%'}} >
            <View style={{width:'90%',height:'60%',paddingTop:20,alignSelf:'center'}} >
@@ -192,15 +238,16 @@ const Notifications = () => {
                                     </View>
                                 </View>
                             :
-                                <View style={{flexDirection:'row',justifyContent:'space-evenly',marginTop:20}} >
+                                <TouchableOpacity onPress={()=>props.navigation.navigate('NotifDetail')} style={{flexDirection:'row',justifyContent:'space-evenly',marginTop:20}} >
                                     <View style={styles.dp} />
                                     <View style={{marginLeft:8,marginRight:8,width:'70%'}} >
                                         <Text style={[styles.textstyle,{fontSize:12}]} >
+                                            <Text style={[styles.textstyle,{fontSize:12,color:colors.gradient1}]} >{item.promo}</Text>
                                             {item.text}
                                         </Text>
                                     </View>
                                     <Text style={[styles.textstyle,{fontSize:12,color:colors.lightgrey4}]} >{item.time}</Text>
-                                </View>
+                                </TouchableOpacity>
                             }
                         </>
                     )
@@ -210,6 +257,25 @@ const Notifications = () => {
         </View>
     )
 }
+
+const NotifStack = () =>{
+    return(
+      <Stack.Navigator
+        initialRouteName="Notifications"
+      >
+        <Stack.Screen  name="Notifications" component={Notifications}  
+          options={{
+            headerShown : false
+          }}
+        />
+        <Stack.Screen  name="NotifDetail" component={NotifDetail}
+          options={{
+            headerShown : false
+          }}
+        />
+      </Stack.Navigator>
+    )
+  }
 
 export default function Message(props) {
   return (
@@ -239,7 +305,7 @@ export default function Message(props) {
                     />
                     <Tab.Screen
                         name="Notifications"
-                        component={Notifications}
+                        component={NotifStack}
                         // component={props => <PriceDura {...props} />}
                         options={{
                             // tabBarStyle:{borderLeftWidth:1},

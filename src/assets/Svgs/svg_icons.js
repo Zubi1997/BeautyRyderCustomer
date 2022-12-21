@@ -468,7 +468,52 @@ const ViewList = ()=>{
             <SvgXml xml={xml}  />
         
         )}
+  
     
+        const Wallet = ()=>{
+            const xml = `<svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22" fill="none">
+            <path d="M1 14.3044V13.4975" stroke="#E33895" stroke-miterlimit="10" stroke-linejoin="round"/>
+            <path d="M18.7061 16.5185V19.8196C18.7061 20.4732 18.1725 21 17.5257 21H2.18723C1.53368 21 1.00684 20.4665 1.00684 19.8196V15.2714" stroke="url(#paint0_linear_120_1425)" stroke-miterlimit="10" stroke-linejoin="round"/>
+            <path d="M1 12.4838V8.12238C1 7.46883 1.53351 6.94199 2.18039 6.94199H17.5188C17.7923 6.94199 18.0457 7.03535 18.2457 7.1954C18.3124 7.24875 18.3724 7.30878 18.4325 7.37546C18.5992 7.5822 18.7059 7.84229 18.7059 8.12905V11.3501" stroke="#E33895" stroke-miterlimit="10" stroke-linejoin="round"/>
+            <path d="M18.2451 7.19539C18.045 7.03534 17.7916 6.94198 17.5182 6.94198H6.08105L10.3158 2.59386L11.8696 1L18.2451 7.19539Z" stroke="#E33895" stroke-miterlimit="10" stroke-linejoin="round"/>
+            <path d="M10.3159 2.59386L6.08114 6.94198H2.92676L8.72202 1L10.3159 2.59386Z" stroke="#E33895" stroke-miterlimit="10" stroke-linejoin="round"/>
+            <path d="M12.2369 11.3501C11.5234 11.3501 10.8765 11.6369 10.4097 12.1104C9.94284 12.5772 9.64941 13.2241 9.64941 13.9377C9.64941 15.3648 10.8098 16.5252 12.2369 16.5252H20.3196V11.3501H12.2369V11.3501ZM12.1569 14.7046C11.7301 14.7046 11.39 14.3578 11.39 13.9377C11.39 13.5175 11.7368 13.1707 12.1569 13.1707C12.5837 13.1707 12.9238 13.5175 12.9238 13.9377C12.9238 14.3578 12.5771 14.7046 12.1569 14.7046Z" stroke="url(#paint1_linear_120_1425)" stroke-miterlimit="10" stroke-linejoin="round"/>
+            <defs>
+            <linearGradient id="paint0_linear_120_1425" x1="9.85645" y1="15.2714" x2="9.85645" y2="21" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#E33895"/>
+            <stop offset="1" stop-color="#79489D"/>
+            </linearGradient>
+            <linearGradient id="paint1_linear_120_1425" x1="14.9845" y1="11.3501" x2="14.9845" y2="16.5252" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#E33895"/>
+            <stop offset="1" stop-color="#79489D"/>
+            </linearGradient>
+            </defs>
+            </svg>`
+                return(
+                <SvgXml xml={xml}  />
+            
+        )}
+
+        const GradientPlus = ()=>{
+            const xml = `<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+            <path d="M5 1V9" stroke="url(#paint0_linear_120_1468)" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M1 5H9" stroke="url(#paint1_linear_120_1468)" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+            <linearGradient id="paint0_linear_120_1468" x1="5.5" y1="1" x2="5.5" y2="9" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#E33895"/>
+            <stop offset="1" stop-color="#79489D"/>
+            </linearGradient>
+            <linearGradient id="paint1_linear_120_1468" x1="5" y1="4" x2="5" y2="6" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#E33895"/>
+            <stop offset="1" stop-color="#79489D"/>
+            </linearGradient>
+            </defs>
+            </svg>`
+                return(
+                <SvgXml xml={xml}  />
+            
+        )}
+
         export  {
             Google_icon,
             Facebook_icon,
@@ -500,5 +545,5 @@ const ViewList = ()=>{
             UploadBlack,
             LocationBlack,
             Down,Up,Info,ViewList,
-            Calendar
+            Calendar,Wallet,GradientPlus
         };

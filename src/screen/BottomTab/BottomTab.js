@@ -4,7 +4,7 @@ import BusinessList from '../Dashboard/BusinessList';
 import Services from '../Dashboard/Services';
 import SerScreen from '../Dashboard/SerScreen';
 import ScreenDetail from '../Dashboard/ServiceDetail';
-import Map from '../Dashboard/Map';
+import Map from '../Dashboard/Payment';
 import Activity from '../Dashboard/Activity';
 import Settings from '../Dashboard/Setting';
 import BookingActivity from '../Dashboard/BookingActivity';

@@ -54,7 +54,7 @@ function OtpScreen({navigation}) {
                 style={styles.inpt}
             />
 
-            <View style={{flexDirection:'row',justifyContent:'space-between',marginTop:100}} >
+            <View style={{flexDirection:'row',justifyContent:'space-between',width:'90%',marginTop:100}} >
                 <GradientBorder
                     additional={[styles.mainLinea,{width:windowWidth - 250}]}
                     addInner={[styles.innerTouc,{width:windowWidth - 253,flexDirection:'row'}]}
@@ -91,8 +91,8 @@ const styles = StyleSheet.create({
     },
     gB:{
         // marginTop:windowHeight/15,
-        marginTop:32,
-        marginLeft:40,
+        marginTop:30,
+        // marginLeft:40,
         width:windowWidth - 250,
         height:60,
         alignSelf:'center'

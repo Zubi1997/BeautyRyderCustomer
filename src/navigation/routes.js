@@ -7,6 +7,7 @@ import MobileNum from '../screen/Auth/MobileNumber/MobileNumber';
 import OtpScreen from '../screen/Auth/Otp/Otp';
 import Main from '../screen/BottomTab/BottomTab';
 import LocationSearch from '../screen/Dashboard/LocationSearch';
+import Payment from '../screen/Dashboard/Payment';
 
 
 
@@ -35,6 +36,7 @@ const Stack = createNativeStackNavigator();
         <Stack.Screen name="OtpScreen" component={OtpScreen} />
         <Stack.Screen name="Main" component={Main} />
         <Stack.Screen name="LocationSearch" component={LocationSearch} />
+        <Stack.Screen name="Payment" component={Payment} />
      
         {/* dummy */}
       </Stack.Navigator>

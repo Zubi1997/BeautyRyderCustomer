@@ -124,6 +124,7 @@ export default function BookingActivity(props) {
                         setact(false)
                         sethis(false)
                         setcanc(true)
+                        props.navigation.navigate('Payment')
                     }}
                 />
         </View> 
