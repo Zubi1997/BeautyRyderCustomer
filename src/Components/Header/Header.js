@@ -1,20 +1,20 @@
 
 import React from 'react'
-import { TouchableOpacity, View, Text, StyleSheet, Dimensions } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import colors from '../../assets/colors';
 import Font_style from '../../assets/Font_style';
 import { Option, LeftBlack } from '../../assets/Svgs/svg_icons';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
+import { useNavigation } from '@react-navigation/native';
 
-const Header = ({ text, Icon, add, onpress, option }) => {
+const Header = ({ text, Icon, add, onpress, option, style }) => {
+    const navigation = useNavigation();
     return (
-        <View style={{ ...styles.header, paddingTop: getStatusBarHeight() + 25 }} >
-            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                <TouchableOpacity style={{ paddingRight: 10 }} onPress={() => onpress()} >
-                    <LeftBlack />
-                </TouchableOpacity>
-                <Text style={styles.name} >Back</Text>
-            </View>
+        <View style={{ ...styles.header, paddingTop: getStatusBarHeight() + 25, ...style }} >
+            <TouchableOpacity hitSlop={{top: 20, left: 20, right: 20, bottom: 20}} style={{ flexDirection: 'row', alignItems: 'center' }} onPress={() => navigation.goBack()} >
+                <LeftBlack />
+                <Text style={[styles.name, { paddingLeft: 10, }]}>Back</Text>
+            </TouchableOpacity>
             <Text style={styles.name}>{text}</Text>
             <View style={styles.option} >
                 {option &&

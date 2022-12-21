@@ -275,6 +275,7 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     borderColor: colors.purple_text,
     borderStyle: 'dashed',
+    height: 45,
   },
   checkButton: {
     alignItems: 'center',

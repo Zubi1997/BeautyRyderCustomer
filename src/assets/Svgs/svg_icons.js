@@ -449,6 +449,17 @@ const Up = () => {
     )
 }
 
+const Share = () => {
+    const xml = `<svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16.3397 9.88239V15.4339C16.3397 16.2987 15.6822 17 14.8714 17H2.46822C1.65741 17 1 16.2987 1 15.4339V9.88239" stroke="#333333" stroke-miterlimit="10" stroke-linejoin="round"/>
+    <path d="M3.71777 6.29438L8.67029 1.01169L13.6228 6.29438" stroke="#333333" stroke-miterlimit="10" stroke-linejoin="round"/>
+    <path d="M8.66992 1V13.1665" stroke="#333333" stroke-miterlimit="10" stroke-linejoin="round"/>
+    </svg>`
+    return (
+        <SvgXml xml={xml} />
+    )
+}
+
 const Info = () => {
     const xml = `<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
         <path d="M4 0C1.78857 0 0 1.78857 0 4C0 6.21143 1.78857 8 4 8C6.21143 8 8 6.21143 8 4C8 1.78857 6.21143 0 4 0ZM4.57143 6.25714C4.57143 6.57143 4.31429 6.82857 4 6.82857C3.68571 6.82857 3.42857 6.57143 3.42857 6.25714V3.95429C3.42857 3.64 3.68571 3.38286 4 3.38286C4.31429 3.38286 4.57143 3.64 4.57143 3.95429V6.25714ZM4 2.88571C3.52571 2.88571 3.14286 2.49714 3.14286 2.02857C3.14286 1.55429 3.52571 1.17143 4 1.17143C4.47429 1.17143 4.85714 1.55429 4.85714 2.02857C4.85714 2.49714 4.47429 2.88571 4 2.88571Z" fill="#B0B0B0"/>
@@ -636,6 +647,152 @@ const AmericanXpressCard = () => {
     )
 }
 
+const AngryEmoji = () => {
+    const xml = `<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 33C26.2843 33 33 26.2843 33 18C33 9.71573 26.2843 3 18 3C9.71573 3 3 9.71573 3 18C3 26.2843 9.71573 33 18 33Z" fill="url(#paint0_linear_77_1558)"/>
+<path d="M35.5 18C35.5 27.665 27.665 35.5 18 35.5C8.33502 35.5 0.5 27.665 0.5 18C0.5 8.33502 8.33502 0.5 18 0.5C27.665 0.5 35.5 8.33502 35.5 18Z" stroke="url(#paint1_linear_77_1558)"/>
+<path d="M13.2533 25C13.2533 25.5533 12.5267 26 11.6267 26C10.7267 26 10 25.5533 10 25C10 24.4467 10.7267 24 11.6267 24C12.5267 24 13.2533 24.4467 13.2533 25Z" fill="black"/>
+<path d="M26.0822 24.7903C26.0822 25.3436 25.4507 25.7903 24.6686 25.7903C23.8864 25.7903 23.2549 25.3436 23.2549 24.7903C23.2549 24.2369 23.8864 23.7903 24.6686 23.7903C25.4507 23.7903 26.0822 24.2369 26.0822 24.7903Z" fill="black"/>
+<path d="M8 22C8 22 8.24913 22.4983 8.7416 22.7416C9.23986 22.9907 12.832 23.6107 14.8134 23.6107" stroke="black" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+<path d="M28.1845 22C28.1845 22 27.9354 22.4983 27.4429 22.7416C26.9447 22.9907 23.3526 23.6107 21.3711 23.6107" stroke="black" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+<path d="M13.457 28.2964C13.457 28.2964 15.4639 27.2388 18.3869 27.1639C22.2175 27.0639 23.6499 28.3963 23.0586 28.5962C21.11 29.279 10.7173 29.5122 13.457 28.2964Z" fill="black"/>
+<defs>
+<linearGradient id="paint0_linear_77_1558" x1="18" y1="3" x2="18" y2="33" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FDDA74"/>
+<stop offset="1" stop-color="#EE9715"/>
+</linearGradient>
+<linearGradient id="paint1_linear_77_1558" x1="18" y1="0" x2="18" y2="36" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FDDA74"/>
+<stop offset="1" stop-color="#EE9715"/>
+</linearGradient>
+</defs>
+</svg>
+    `
+    return (
+        <SvgXml xml={xml} />
+
+    )
+}
+
+const SadEmoji = () => {
+    const xml = `<svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M3.26163 8.68349C4.24048 8.68349 5.034 7.73031 5.034 6.55451C5.034 5.37871 4.24048 4.42554 3.26163 4.42554C2.28278 4.42554 1.48926 5.37871 1.48926 6.55451C1.48926 7.73031 2.28278 8.68349 3.26163 8.68349Z" fill="black"/>
+    <path d="M18.1649 6.55451C18.1649 7.73077 17.3718 8.68349 16.3925 8.68349C15.4132 8.68349 14.6201 7.73077 14.6201 6.55451C14.6201 5.37825 15.4132 4.42554 16.3925 4.42554C17.3718 4.42554 18.1649 5.37825 18.1649 6.55451Z" fill="black"/>
+    <path d="M6.55664 13L7.38694 12.4465C9.03157 11.3554 11.1339 11.5789 12.5604 13" fill="black"/>
+    <path d="M6.55664 13L7.38694 12.4465C9.03157 11.3554 11.1339 11.5789 12.5604 13" stroke="black" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+    <path d="M4.59265 1.35647C4.59265 1.35647 2.36254 -0.00607482 1 2.5966Z" fill="black"/>
+    <path d="M4.59265 1.35647C4.59265 1.35647 2.36254 -0.00607482 1 2.5966" stroke="black" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+    <path d="M14.9932 1.35647C14.9932 1.35647 17.2233 -0.00607482 18.5858 2.5966Z" fill="black"/>
+    <path d="M14.9932 1.35647C14.9932 1.35647 17.2233 -0.00607482 18.5858 2.5966" stroke="black" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+    </svg>    
+    `
+    return (
+        <SvgXml xml={xml} />
+
+    )
+}
+
+const HappyEmoji = () => {
+    const xml = `<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 33C26.2843 33 33 26.2843 33 18C33 9.71573 26.2843 3 18 3C9.71573 3 3 9.71573 3 18C3 26.2843 9.71573 33 18 33Z" fill="url(#paint0_linear_77_1560)"/>
+    <path d="M35.5 18C35.5 27.665 27.665 35.5 18 35.5C8.33502 35.5 0.5 27.665 0.5 18C0.5 8.33502 8.33502 0.5 18 0.5C27.665 0.5 35.5 8.33502 35.5 18Z" stroke="url(#paint1_linear_77_1560)"/>
+    <path d="M8 14L13.5667 15.3555L8.89786 16.8616" stroke="black" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M27.7073 14L22.1406 15.3555L26.8037 16.8616" stroke="black" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M8.74805 20.5182C9.95291 25.3493 13.5791 28.8654 17.8656 28.8654C22.1522 28.8654 25.7784 25.3551 26.9832 20.5182L25.4018 20.2691C20.3391 19.4756 15.1779 19.4871 10.1151 20.2981L8.74805 20.5182Z" fill="black"/>
+    <path d="M24.0811 25.9981C22.5113 25.0191 20.3391 24.4167 17.9409 24.4167C15.4965 24.4167 13.2895 25.0481 11.7139 26.056C13.3764 27.7996 15.5196 28.8596 17.8656 28.8596C20.2406 28.8596 22.4128 27.7822 24.0811 25.9981Z" fill="white"/>
+    <defs>
+    <linearGradient id="paint0_linear_77_1560" x1="18" y1="3" x2="18" y2="33" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#FDDA74"/>
+    <stop offset="1" stop-color="#EE9715"/>
+    </linearGradient>
+    <linearGradient id="paint1_linear_77_1560" x1="18" y1="0" x2="18" y2="36" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#FDDA74"/>
+    <stop offset="1" stop-color="#EE9715"/>
+    </linearGradient>
+    </defs>
+    </svg>    
+    `
+    return (
+        <SvgXml xml={xml} />
+
+    )
+}
+
+const LikeEmoji = () => {
+    const xml = `<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 33C26.2843 33 33 26.2843 33 18C33 9.71573 26.2843 3 18 3C9.71573 3 3 9.71573 3 18C3 26.2843 9.71573 33 18 33Z" fill="url(#paint0_linear_77_1533)"/>
+    <path d="M35.5 18C35.5 27.665 27.665 35.5 18 35.5C8.33502 35.5 0.5 27.665 0.5 18C0.5 8.33502 8.33502 0.5 18 0.5C27.665 0.5 35.5 8.33502 35.5 18Z" stroke="url(#paint1_linear_77_1533)"/>
+    <path d="M13.245 26H10.595C10.265 26 10 25.7418 10 25.4203V16.9149C10 16.5934 10.265 16.3352 10.595 16.3352H13.245C13.575 16.3352 13.84 16.5934 13.84 16.9149V25.4203C13.84 25.7418 13.575 26 13.245 26ZM23.84 23.7543C23.84 23.7543 24.61 23.3792 24.995 22.7557C25.38 22.1321 25.125 21.1286 25.125 21.1286C25.125 21.1286 26.025 20.7535 26.15 19.3798C26.28 18.0061 25.51 17.5043 25.51 17.5043C26.41 15.5022 24.995 14.8787 24.995 14.8787H20.505C20.505 14.8787 21.53 10.1291 19.095 10.0024C17.835 9.93908 17.555 11.1277 17.555 13.0032C17.555 14.8787 14.965 16.2621 14.965 16.2621V23.8274L16.31 24.3778C16.755 24.5629 17.235 24.6555 17.72 24.6555H21.79C22.94 24.6263 23.84 23.7543 23.84 23.7543Z" fill="black"/>
+    <defs>
+    <linearGradient id="paint0_linear_77_1533" x1="18" y1="3" x2="18" y2="33" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#FDDA74"/>
+    <stop offset="1" stop-color="#EE9715"/>
+    </linearGradient>
+    <linearGradient id="paint1_linear_77_1533" x1="18" y1="0" x2="18" y2="36" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#FDDA74"/>
+    <stop offset="1" stop-color="#EE9715"/>
+    </linearGradient>
+    </defs>
+    </svg>       
+    `
+    return (
+        <SvgXml xml={xml} />
+
+    )
+}
+
+const HeartEmoji = () => {
+    const xml = `<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 33C26.2843 33 33 26.2843 33 18C33 9.71573 26.2843 3 18 3C9.71573 3 3 9.71573 3 18C3 26.2843 9.71573 33 18 33Z" fill="url(#paint0_linear_77_1534)"/>
+    <path d="M35.5 18C35.5 27.665 27.665 35.5 18 35.5C8.33502 35.5 0.5 27.665 0.5 18C0.5 8.33502 8.33502 0.5 18 0.5C27.665 0.5 35.5 8.33502 35.5 18Z" stroke="url(#paint1_linear_77_1534)"/>
+    <path d="M26.7415 15.9194C26.7415 13.2049 24.6336 11 22.0383 11C20.2246 11 18.6524 12.0761 17.8708 13.6442C17.0847 12.0717 15.5125 11 13.7033 11C11.1035 11 9 13.2006 9 15.9194C9 18.7173 11.345 20.1492 13.3695 21.647C14.8802 22.767 16.3908 23.8827 17.9059 25.0027C19.9128 23.5181 21.9197 22.0335 23.9266 20.5489C25.5207 19.3674 26.7415 18.0365 26.7415 15.9194Z" fill="black"/>
+    <defs>
+    <linearGradient id="paint0_linear_77_1534" x1="18" y1="3" x2="18" y2="33" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#FDDA74"/>
+    <stop offset="1" stop-color="#EE9715"/>
+    </linearGradient>
+    <linearGradient id="paint1_linear_77_1534" x1="18" y1="0" x2="18" y2="36" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#FDDA74"/>
+    <stop offset="1" stop-color="#EE9715"/>
+    </linearGradient>
+    </defs>
+    </svg>         
+    `
+    return (
+        <SvgXml xml={xml} />
+
+    )
+}
+
+const AmazedEmoji = () => {
+    const xml = `<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 33C26.2843 33 33 26.2843 33 18C33 9.71573 26.2843 3 18 3C9.71573 3 3 9.71573 3 18C3 26.2843 9.71573 33 18 33Z" fill="url(#paint0_linear_77_1535)"/>
+    <path d="M35.5 18C35.5 27.665 27.665 35.5 18 35.5C8.33502 35.5 0.5 27.665 0.5 18C0.5 8.33502 8.33502 0.5 18 0.5C27.665 0.5 35.5 8.33502 35.5 18Z" stroke="url(#paint1_linear_77_1535)"/>
+    <path d="M13.4444 14.9487C13.149 16.6807 11.9268 17.9203 10.7161 17.7118C9.50546 17.5032 8.7698 15.9334 9.06522 14.1956C9.36064 12.4636 10.5829 11.224 11.7935 11.4326C13.0042 11.6411 13.7457 13.2167 13.4444 14.9487Z" fill="black"/>
+    <path d="M23.1069 14.9487C23.4023 16.6807 24.6246 17.9203 25.8352 17.7118C27.0459 17.5032 27.7815 15.9334 27.4861 14.1956C27.1907 12.4636 25.9684 11.224 24.7578 11.4326C23.5529 11.6411 22.8115 13.2167 23.1069 14.9487Z" fill="black"/>
+    <path d="M18.2066 30.2781C20.2861 30.2781 21.9718 27.4694 21.9718 24.0047C21.9718 20.54 20.2861 17.7313 18.2066 17.7313C16.1271 17.7313 14.4414 20.54 14.4414 24.0047C14.4414 27.4694 16.1271 30.2781 18.2066 30.2781Z" fill="black"/>
+    <path d="M9.4248 9.99176L10.091 9.55152C11.4175 8.67683 13.1031 8.8564 14.2501 9.99176" fill="black"/>
+    <path d="M9.4248 9.99176L10.091 9.55152C11.4175 8.67683 13.1031 8.8564 14.2501 9.99176" stroke="black" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+    <path d="M22.5508 9.99176L23.2169 9.55152C24.5434 8.67683 26.2291 8.8564 27.376 9.99176" fill="black"/>
+    <path d="M22.5508 9.99176L23.2169 9.55152C24.5434 8.67683 26.2291 8.8564 27.376 9.99176" stroke="black" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+    <defs>
+    <linearGradient id="paint0_linear_77_1535" x1="18" y1="3" x2="18" y2="33" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#FDDA74"/>
+    <stop offset="1" stop-color="#EE9715"/>
+    </linearGradient>
+    <linearGradient id="paint1_linear_77_1535" x1="18" y1="0" x2="18" y2="36" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#FDDA74"/>
+    <stop offset="1" stop-color="#EE9715"/>
+    </linearGradient>
+    </defs>
+    </svg>             
+    `
+    return (
+        <SvgXml xml={xml} />
+
+    )
+}
+
 const Dummy5 = () => {
     const xml = `
     
@@ -683,5 +840,12 @@ export {
     VisaCard,
     MasterCard,
     AmericanXpressCard,
-    SuccessIcon
+    SuccessIcon,
+    Share,
+    AmazedEmoji,
+    AngryEmoji,
+    SadEmoji,
+    HappyEmoji,
+    HeartEmoji,
+    LikeEmoji
 };

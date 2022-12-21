@@ -24,6 +24,7 @@ const App = props => {
 
   return (
     <Provider store={reduxStore}>
+      <StatusBar backgroundColor={'transparent'} translucent={true} barStyle={'dark-content'} />
       <SafeAreaProvider>
         {/* <StatusBar /> */}
         <MenuProvider>

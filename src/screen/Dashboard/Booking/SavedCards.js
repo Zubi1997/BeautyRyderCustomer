@@ -1,16 +1,15 @@
 import React, { useState } from 'react'
-import { ScrollView, StyleSheet, View, Text, TouchableOpacity, TextInput } from 'react-native'
+import { StyleSheet, View, Text, TouchableOpacity, TextInput } from 'react-native'
 import colors from '../../../assets/colors';
 import Font_style from '../../../assets/Font_style';
 import { AmericanXpressCard, MasterCard, RadioActive, RadioInactive, VisaCard, } from '../../../assets/Svgs/svg_icons';
 import { screenWidth } from '../../../assets/utils';
 import Header from '../../../Components/Header/Header'
-import { Modal } from '../../../Components/Modal';
+import { ModalContent } from '../../../Components/Modal';
 
 
 function SavedCards({ navigation }) {
 
-  const [show, setShow] = useState(true);
   const [selectedPaymentOption, setSelectedPaymentOption] = useState(null);
   const paymentOptions = [
     { id: 1, name: 'AMEX', icon: <AmericanXpressCard />, last4: 1157 },
@@ -18,18 +17,14 @@ function SavedCards({ navigation }) {
     { id: 3, name: 'VISA', icon: <VisaCard />, last4: 8985 },
   ]
   const addNewCard = () => {
-    setShow(false);
     navigation.navigate('AddCard')
   }
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.background }}>
-      <Header
-        onpress={() => navigation.goBack()}
-        text="Saved Card"
-      />
-      <ScrollView style={{ paddingHorizontal: 20, backgroundColor: colors.grey }} contentContainerStyle={{ flexGrow: 1 }}>
-        <Modal visible={show} hasModalOverlay={false}>
+      <Header text="Saved Card" />
+      <View style={{ backgroundColor: colors.grey, marginTop: 40 }}>
+        <ModalContent>
           {paymentOptions.map((item, i) => (
             <TouchableOpacity key={i} style={{ flexDirection: 'row', alignItems: 'center', marginTop: 15, }} onPress={() => setSelectedPaymentOption(item.id)}>
               {selectedPaymentOption === item.id ? <RadioActive /> : <RadioInactive />}
@@ -57,11 +52,11 @@ function SavedCards({ navigation }) {
           <TouchableOpacity style={styles.modalButton} onPress={addNewCard}>
             <Text style={styles.modalButtonText}>ADD NEW CARD</Text>
           </TouchableOpacity>
-        </Modal>
-        <TouchableOpacity style={[styles.confirmButton, { position: 'absolute', bottom: 40, width: screenWidth - 40 }]} onPress={() => { }}>
-          <Text style={styles.confirmButtonText}>CONFIRM</Text>
-        </TouchableOpacity>
-      </ScrollView>
+        </ModalContent>
+      </View>
+      <TouchableOpacity style={[styles.confirmButton, { position: 'absolute', zIndex: 1, bottom: 40, width: screenWidth - 40, alignSelf: 'center' }]} onPress={() => navigation.navigate('PlaceOrder')}>
+        <Text style={styles.confirmButtonText}>CONFIRM</Text>
+      </TouchableOpacity>
     </View>
   )
 }

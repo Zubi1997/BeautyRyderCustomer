@@ -4,6 +4,20 @@ import colors from "../assets/colors"
 import { GradientCrossIcon } from "../assets/Svgs/svg_icons"
 import { screenWidth } from "../assets/utils"
 
+export const ModalContent = ({ children, ...props }) => {
+  const { hasCloseIcon = true } = props;
+  return (
+    <View style={styles.modalContent}>
+      {hasCloseIcon && (
+        <TouchableOpacity style={{ alignSelf: 'center', marginTop: -20 }} onPress={props.onRequestClose}>
+          <GradientCrossIcon />
+        </TouchableOpacity>
+      )}
+      {children}
+    </View>
+  )
+}
+
 export const Modal = ({ children, ...props }) => {
   const { hasModalOverlay = true, hasCloseIcon = true } = props;
   return (
@@ -13,14 +27,9 @@ export const Modal = ({ children, ...props }) => {
           <View style={styles.modalOverlay} />
         </TouchableWithoutFeedback>
         }
-        <View style={styles.modalContent}>
-          {hasCloseIcon && (
-            <TouchableOpacity style={{ alignSelf: 'center', marginTop: -20 }} onPress={props.onRequestClose}>
-              <GradientCrossIcon />
-            </TouchableOpacity>
-          )}
+        <ModalContent hasCloseIcon={hasCloseIcon}>
           {children}
-        </View>
+        </ModalContent>
       </View>
     </DefaultModal>
   )
