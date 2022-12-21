@@ -1,52 +1,37 @@
-import React,{useState,useRef,useEffect} from 'react';
-import { StyleSheet, TextInput, View, TouchableOpacity,Dimensions,SafeAreaView ,FlatList, ScrollView,ActivityIndicator} from 'react-native';
+import React from 'react';
+import { StyleSheet, Text, TextInput, View } from 'react-native';
 import colors from '../../assets/colors';
+import Font_style from '../../assets/Font_style';
 
-
-var windowWidth = Dimensions.get('window').width
-var windowHeight=Dimensions.get('window').height
-
-export default function Textinput({
-    input_value,
-    set_input,
-    hight,
-    inputStyle,
-    placeholder
-}) {
-
-    const [manual_time, set_manual_time] = useState('');
-    const [hightt, set_hightt] = useState(hight || 60);
-
-    useEffect(()=>{
-        // alert(upper_margin)
-    },[])
-
+export default function Textinput({ label, value, style={}, containerStyle={}, placeholder, onChangeText=()=>{} }) {
 
   return (
-        <TextInput
-            placeholder={placeholder}
-            style={[{
-                height:hightt,
-                fontSize:12,
-                // lineHeight:26,
-                // width:windowWidth-40,
-                paddingHorizontal: 10,
-                padding:0,
-                // color: '#000',
-                borderWidth:2,
-                borderColor:colors.divider,
-                borderRadius:4
-            },inputStyle]}
-            value={input_value}
-            onChangeText={(val)=>set_input(val)}
-        />
-      );
+    <View style={{marginTop: 10, ...containerStyle}}>
+      {label && <Text style={styles.labelText}>{label}</Text>}
+      <TextInput
+        placeholder={placeholder}
+        placeholderTextColor={colors.blu}
+        style={[styles.inputStyle, style]}
+        value={value}
+        onChangeText={(val) => onChangeText(val)}
+      />
+    </View>
+  );
 }
 const styles = StyleSheet.create({
-
-  line: {
-    backgroundColor:colors.divider,
-  },
-  
-
+inputStyle: {
+  height: 40,
+  fontSize: 12,
+  marginTop: 5,
+  paddingHorizontal: 10,
+  paddingVertical: 5,
+  borderWidth: 1,
+  borderColor: colors.blu,
+  borderRadius: 4
+},
+labelText: {
+  fontFamily: Font_style.Poppins_Regular, 
+  fontSize: 12, 
+  color: colors.text,
+}
 });

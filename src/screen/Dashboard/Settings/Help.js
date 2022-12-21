@@ -24,7 +24,7 @@ function Help({ navigation }) {
             imgPath: <GetHelp_icon />,
             text: 'Get help with my order',
             subtext: 'Edit your personal details',
-            onPress: () => navigation.navigate('Personal_info')
+            onPress: () => navigation.navigate('BookingDetails')
         },
         {
             id: 2,

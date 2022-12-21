@@ -10,6 +10,7 @@ const colors = {
   lightgrey2: "#DFDFDF",
   lightgrey3: "#B6B6B6",
   background_grey: "#F6F5F5",
+  grey: "#F5F5F5",
   purple_text: "#79489D",
   white: "#FFFFFF",
   grey_btn: "#EDEDED",
