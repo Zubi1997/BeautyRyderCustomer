@@ -536,8 +536,18 @@ const Voucher_icon = () => {
 
     )
 }
-const Dummy5 = () => {
+const ViewList = () => {
     const xml = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="90" height="30" viewBox="0 0 90 30" fill="none">
+        <path d="M0 15C0 6.71573 6.71573 0 15 0H90V30H15C6.71573 30 0 23.2843 0 15Z" fill="white"/>
+        <path d="M17.1699 15H29.1699" stroke="#333333" stroke-miterlimit="10" stroke-linejoin="round"/>
+        <path d="M17.1699 10H29.1699" stroke="#333333" stroke-miterlimit="10" stroke-linejoin="round"/>
+        <path d="M29.1699 20H17.1699" stroke="#333333" stroke-miterlimit="10" stroke-linejoin="round"/>
+        <path d="M14 15H16" stroke="#333333" stroke-miterlimit="10" stroke-linejoin="round"/>
+        <path d="M14 10H16" stroke="#333333" stroke-miterlimit="10" stroke-linejoin="round"/>
+        <path d="M16 20H14" stroke="#333333" stroke-miterlimit="10" stroke-linejoin="round"/>
+        <path d="M41.6179 12.03L38.9879 19H37.9379L35.3079 12.03H36.2779L38.4679 18.04L40.6579 12.03H41.6179ZM43.5257 12.03V19H42.6157V12.03H43.5257ZM45.9866 12.77V15.1H48.5266V15.85H45.9866V18.25H48.8266V19H45.0766V12.02H48.8266V12.77H45.9866ZM58.9636 12.03L56.9436 19H55.9236L54.3036 13.39L52.6236 19L51.6136 19.01L49.6636 12.03H50.6336L52.1536 17.94L53.8336 12.03H54.8536L56.4536 17.92L57.9836 12.03H58.9636ZM63.5355 18.26H65.9755V19H62.6255V12.03H63.5355V18.26ZM67.8519 12.03V19H66.9419V12.03H67.8519ZM71.6128 19.07C71.1528 19.07 70.7395 18.99 70.3728 18.83C70.0128 18.6633 69.7295 18.4367 69.5228 18.15C69.3161 17.8567 69.2095 17.52 69.2028 17.14H70.1728C70.2061 17.4667 70.3395 17.7433 70.5728 17.97C70.8128 18.19 71.1595 18.3 71.6128 18.3C72.0461 18.3 72.3861 18.1933 72.6328 17.98C72.8861 17.76 73.0128 17.48 73.0128 17.14C73.0128 16.8733 72.9395 16.6567 72.7928 16.49C72.6461 16.3233 72.4628 16.1967 72.2428 16.11C72.0228 16.0233 71.7261 15.93 71.3528 15.83C70.8928 15.71 70.5228 15.59 70.2428 15.47C69.9695 15.35 69.7328 15.1633 69.5328 14.91C69.3395 14.65 69.2428 14.3033 69.2428 13.87C69.2428 13.49 69.3395 13.1533 69.5328 12.86C69.7261 12.5667 69.9961 12.34 70.3428 12.18C70.6961 12.02 71.0995 11.94 71.5528 11.94C72.2061 11.94 72.7395 12.1033 73.1528 12.43C73.5728 12.7567 73.8095 13.19 73.8628 13.73H72.8628C72.8295 13.4633 72.6895 13.23 72.4428 13.03C72.1961 12.8233 71.8695 12.72 71.4628 12.72C71.0828 12.72 70.7728 12.82 70.5328 13.02C70.2928 13.2133 70.1728 13.4867 70.1728 13.84C70.1728 14.0933 70.2428 14.3 70.3828 14.46C70.5295 14.62 70.7061 14.7433 70.9128 14.83C71.1261 14.91 71.4228 15.0033 71.8028 15.11C72.2628 15.2367 72.6328 15.3633 72.9128 15.49C73.1928 15.61 73.4328 15.8 73.6328 16.06C73.8328 16.3133 73.9328 16.66 73.9328 17.1C73.9328 17.44 73.8428 17.76 73.6628 18.06C73.4828 18.36 73.2161 18.6033 72.8628 18.79C72.5095 18.9767 72.0928 19.07 71.6128 19.07ZM79.562 12.03V12.77H77.662V19H76.752V12.77H74.842V12.03H79.562Z" fill="#333333"/>
+        </svg>
     
     `
     return (
@@ -878,6 +888,53 @@ const AmazedEmoji = () => {
     )
 }
 
+
+const Wallet = () => {
+    const xml = `<svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22" fill="none">
+            <path d="M1 14.3044V13.4975" stroke="#E33895" stroke-miterlimit="10" stroke-linejoin="round"/>
+            <path d="M18.7061 16.5185V19.8196C18.7061 20.4732 18.1725 21 17.5257 21H2.18723C1.53368 21 1.00684 20.4665 1.00684 19.8196V15.2714" stroke="url(#paint0_linear_120_1425)" stroke-miterlimit="10" stroke-linejoin="round"/>
+            <path d="M1 12.4838V8.12238C1 7.46883 1.53351 6.94199 2.18039 6.94199H17.5188C17.7923 6.94199 18.0457 7.03535 18.2457 7.1954C18.3124 7.24875 18.3724 7.30878 18.4325 7.37546C18.5992 7.5822 18.7059 7.84229 18.7059 8.12905V11.3501" stroke="#E33895" stroke-miterlimit="10" stroke-linejoin="round"/>
+            <path d="M18.2451 7.19539C18.045 7.03534 17.7916 6.94198 17.5182 6.94198H6.08105L10.3158 2.59386L11.8696 1L18.2451 7.19539Z" stroke="#E33895" stroke-miterlimit="10" stroke-linejoin="round"/>
+            <path d="M10.3159 2.59386L6.08114 6.94198H2.92676L8.72202 1L10.3159 2.59386Z" stroke="#E33895" stroke-miterlimit="10" stroke-linejoin="round"/>
+            <path d="M12.2369 11.3501C11.5234 11.3501 10.8765 11.6369 10.4097 12.1104C9.94284 12.5772 9.64941 13.2241 9.64941 13.9377C9.64941 15.3648 10.8098 16.5252 12.2369 16.5252H20.3196V11.3501H12.2369V11.3501ZM12.1569 14.7046C11.7301 14.7046 11.39 14.3578 11.39 13.9377C11.39 13.5175 11.7368 13.1707 12.1569 13.1707C12.5837 13.1707 12.9238 13.5175 12.9238 13.9377C12.9238 14.3578 12.5771 14.7046 12.1569 14.7046Z" stroke="url(#paint1_linear_120_1425)" stroke-miterlimit="10" stroke-linejoin="round"/>
+            <defs>
+            <linearGradient id="paint0_linear_120_1425" x1="9.85645" y1="15.2714" x2="9.85645" y2="21" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#E33895"/>
+            <stop offset="1" stop-color="#79489D"/>
+            </linearGradient>
+            <linearGradient id="paint1_linear_120_1425" x1="14.9845" y1="11.3501" x2="14.9845" y2="16.5252" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#E33895"/>
+            <stop offset="1" stop-color="#79489D"/>
+            </linearGradient>
+            </defs>
+            </svg>`
+    return (
+        <SvgXml xml={xml} />
+
+    )
+}
+
+const GradientPlus = () => {
+    const xml = `<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+            <path d="M5 1V9" stroke="url(#paint0_linear_120_1468)" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M1 5H9" stroke="url(#paint1_linear_120_1468)" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+            <linearGradient id="paint0_linear_120_1468" x1="5.5" y1="1" x2="5.5" y2="9" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#E33895"/>
+            <stop offset="1" stop-color="#79489D"/>
+            </linearGradient>
+            <linearGradient id="paint1_linear_120_1468" x1="5" y1="4" x2="5" y2="6" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#E33895"/>
+            <stop offset="1" stop-color="#79489D"/>
+            </linearGradient>
+            </defs>
+            </svg>`
+    return (
+        <SvgXml xml={xml} />
+
+    )
+}
+
 export {
     Google_icon,
     Facebook_icon,
@@ -907,9 +964,15 @@ export {
     Call,
     Fav,
     UploadBlack,
+    Down,
+    Up,
+    Info,
+    ViewList,
+    Calendar,
+    Wallet,
+    GradientPlus,
     LocationBlack,
-    Down, Up, Info,
-    Watch, Calendar,
+    Watch,
     GradientCrossIcon,
     GooglePayIcon,
     CardIcon,

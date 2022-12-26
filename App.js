@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
-import { AppRegistry, StatusBar, LogBox , View , Text } from 'react-native';
-import  AppNavigator  from './src/navigation/routes'
+import { AppRegistry, StatusBar, LogBox, View, Text } from 'react-native';
+import AppNavigator from './src/navigation/routes'
 import Menu, {
   MenuProvider,
-  
+
 } from 'react-native-popup-menu';
 import { Provider } from 'react-redux';
 import reduxStore from './src/redux/store';
@@ -17,7 +17,7 @@ const App = props => {
 
   useEffect(() => {
     SplashScreen.hide();
-  
+
   }, []);
 
 

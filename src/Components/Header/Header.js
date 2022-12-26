@@ -7,7 +7,7 @@ import { Option, LeftBlack } from '../../assets/Svgs/svg_icons';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
 import { useNavigation } from '@react-navigation/native';
 
-const Header = ({ text, Icon, add, onpress, option, style }) => {
+const Header = ({ text, Icon, optionPress, onpress, option, style }) => {
     const navigation = useNavigation();
     return (
         <View style={{ ...styles.header, paddingTop: getStatusBarHeight() + 25, ...style }} >
@@ -16,11 +16,11 @@ const Header = ({ text, Icon, add, onpress, option, style }) => {
                 <Text style={[styles.name, { paddingLeft: 10, }]}>Back</Text>
             </TouchableOpacity>
             <Text style={styles.name}>{text}</Text>
-            <View style={styles.option} >
+            <TouchableOpacity onPress={optionPress} style={styles.option} >
                 {option &&
                     <Option />
                 }
-            </View>
+            </TouchableOpacity>
         </View>
     )
 }

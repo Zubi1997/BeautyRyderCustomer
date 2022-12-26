@@ -3,8 +3,12 @@ import Home from '../Dashboard/Home';
 import BusinessList from '../Dashboard/BusinessList';
 import Services from '../Dashboard/Services';
 import SerScreen from '../Dashboard/SerScreen';
+import ScreenDetail from '../Dashboard/ServiceDetail';
+import Map from '../Dashboard/Payment';
 import Activity from '../Dashboard/Activity';
-import Setting from '../Dashboard/Settings/Setting';
+import Settings from '../Dashboard/Settings/Setting';
+import BookingActivity from '../Dashboard/BookingActivity';
+import Message from '../Dashboard/Message';
 import { Image, Text } from 'react-native';
 import colors from '../../assets/colors';
 import LinearGradient from 'react-native-linear-gradient';
@@ -40,24 +44,73 @@ const SettingStack = () => {
     <Stack.Navigator
       initialRouteName="Setting"
     >
-      <Stack.Screen name="Setting" component={Setting} options={{ headerShown: false }} />
+      <Stack.Screen name="Setting" component={Settings} options={{ headerShown: false }} />
       <Stack.Screen name="Personal_info" component={Personal_info} options={{ headerShown: false }} />
       <Stack.Screen name="Vouchers" component={Vouchers} options={{ headerShown: false }} />
       <Stack.Screen name="Help" component={Help} options={{ headerShown: false }} />
+    </Stack.Navigator>
+  )
+}
+
+const ServiceStack = () => {
+  return (
+    <Stack.Navigator
+      initialRouteName="Services"
+    >
+      <Stack.Screen name="Services" component={SerScreen}
+        options={{
+          headerShown: false
+        }}
+      />
+      <Stack.Screen name="ScreenDetail" component={ScreenDetail}
+        options={{
+          headerShown: false
+        }}
+      />
+      <Stack.Screen name="Map" component={Map}
+        options={{
+          headerShown: false
+        }}
+      />
+    </Stack.Navigator>
+  )
+}
+
+const ActivityStack = () => {
+  return (
+    <Stack.Navigator
+      initialRouteName="Activity"
+    >
+      <Stack.Screen name="Activity" component={Activity}
+        options={{
+          headerShown: false
+        }}
+      />
+      <Stack.Screen name="BookingActivity" component={BookingActivity}
+        options={{
+          headerShown: false
+        }}
+      />
+      <Stack.Screen name="Message" component={Message}
+        options={{
+          headerShown: false
+        }}
+      />
 
 
     </Stack.Navigator>
   )
 }
 
+
 function MyTabs() {
   return (
     <Tab.Navigator
       initialRouteName="Home"
       // tabBarOptions={{ showLabel: false }}
-      barStyle={{ height: 90, backgroundColor: "#E5E5E5" }}
+      barStyle={{ height: 80, backgroundColor: "#E5E5E5" }}
       screenOptions={{
-        tabBarStyle: { height: 90 },
+        tabBarStyle: { height: 80 },
         tabBarActiveTintColor: 'green',
       }}
     >
@@ -75,7 +128,8 @@ function MyTabs() {
           ),
         }}
       />
-      <Tab.Screen name="Services" component={SerScreen}
+
+      <Tab.Screen name="Services" component={ServiceStack}
         options={{
           headerShown: false,
           tabBarLabel: ({ focused }) => (<Text style={{ fontSize: 10, color: focused ? colors.gradient1 : colors.inpt, fontWeight: '400', top: -20 }}> Services </Text>),
@@ -87,6 +141,7 @@ function MyTabs() {
           ),
         }}
       />
+
       <Tab.Screen name="Plus" component={Services}
         options={{
           headerShown: false,
@@ -104,7 +159,8 @@ function MyTabs() {
           ),
         }}
       />
-      <Tab.Screen name="Activity" component={Activity}
+
+      <Tab.Screen name="Activity" component={ActivityStack}
         options={{
           headerShown: false,
           tabBarLabel: ({ focused }) => (<Text style={{ fontSize: 10, color: focused ? colors.gradient1 : colors.inpt, fontWeight: '400', top: -20 }}> Activity </Text>),
@@ -128,6 +184,7 @@ function MyTabs() {
           ),
         }}
       />
+
     </Tab.Navigator>
   );
 }

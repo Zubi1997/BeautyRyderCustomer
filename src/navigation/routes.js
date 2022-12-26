@@ -1,7 +1,7 @@
 import * as React from 'react';
-import {View, Text, Image} from 'react-native';
-import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import { View, Text, Image } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Splash from '../screen/Auth/Splash/Splash';
 import MobileNum from '../screen/Auth/MobileNumber/MobileNumber';
 import OtpScreen from '../screen/Auth/Otp/Otp';
@@ -10,6 +10,8 @@ import Home from '../screen/Dashboard/Home';
 import BusinessList from '../screen/Dashboard/BusinessList';
 import Services from '../screen/Dashboard/Services';
 import BookingDetails from '../screen/Dashboard/Booking/BookingDetails';
+import LocationSearch from '../screen/Dashboard/LocationSearch';
+import Payment from '../screen/Dashboard/Payment';
 
 
 
@@ -32,12 +34,12 @@ const Stack = createNativeStackNavigator();
 
 
 
- function AppNavigator() {
+function AppNavigator() {
   return (
     <NavigationContainer>
       <Stack.Navigator
         initialRouteName="Splash"
-        screenOptions={{headerShown: false}}>
+        screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Splash" component={Splash} />
         <Stack.Screen name="MobileNum" component={MobileNum} />
         <Stack.Screen name="OtpScreen" component={OtpScreen} />
@@ -50,10 +52,13 @@ const Stack = createNativeStackNavigator();
         <Stack.Screen name="Feedback" component={Feedback} />
         {/* <Stack.Screen name="BusinessList" component={BusinessList} />
         <Stack.Screen name="Services" component={Services} /> */}
+        <Stack.Screen name="LocationSearch" component={LocationSearch} />
+        <Stack.Screen name="Payment" component={Payment} />
+
         {/* dummy */}
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
 
-export default  AppNavigator;
+export default AppNavigator;

@@ -1,5 +1,5 @@
 const colors = {
-  background:"#FFFFFF",
+  background: "#FFFFFF",
   primary: "#E33895",
   gradient1: "#E33895",
   gradient2: "#79489D",
@@ -14,12 +14,13 @@ const colors = {
   purple_text: "#79489D",
   white: "#FFFFFF",
   grey_btn: "#EDEDED",
-  text:'#333333',
-  bordr:'#D2D1DB',
-  blu:'#E2E9EE',
-  inpt : '#B0B0B0',
-  inptCont:'#F7F8FA',
-  grey_list:'#F5F5F5'
+  text: '#333333',
+  bordr: '#D2D1DB',
+  blu: '#E2E9EE',
+  inpt: '#B0B0B0',
+  inptCont: '#F7F8FA',
+  grey_list: '#F5F5F5',
+  lightgrey4: '#DADADA',
 };
 
 export default colors
